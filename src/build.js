@@ -15,7 +15,7 @@ const DOMAIN = 'https://turfonlinecalculator.com';
 const LOCALE_MAP = {
   ar: 'ar_AR', de: 'de_DE', en: 'en_US', es: 'es_ES', fr: 'fr_FR',
   it: 'it_IT', ja: 'ja_JP', ko: 'ko_KR', nl: 'nl_NL', pl: 'pl_PL',
-  pt: 'pt_PT', sv: 'sv_SE', tr: 'tr_TR', zh: 'zh_CN',
+  pt: 'pt_BR', sv: 'sv_SE', tr: 'tr_TR', zh: 'zh_CN',
 };
 
 const EXCLUDED_FROM_SITEMAP = new Set(['404']);
@@ -51,6 +51,7 @@ function replacePlaceholders(html, langData, lang, slug, templateSlug, allLangs)
   html = html.replace(/\{\{HEADER\}\}/g, partials.HEADER || '');
   html = html.replace(/\{\{FOOTER\}\}/g, partials.FOOTER || '');
   html = html.replace(/\{\{LANG\}\}/g, lang);
+  html = html.replace(/\{\{LANG_NAME\}\}/g, langData?.lang_name || lang);
   html = html.replace(/\{\{LANG_DIR\}\}/g, RTL_LANGUAGES.has(lang) ? 'rtl' : 'ltr');
 
   const displaySlug = slug === 'index' ? '' : slug + '.html';
@@ -81,6 +82,9 @@ function replacePlaceholders(html, langData, lang, slug, templateSlug, allLangs)
 
   html = injectSeoMeta(html, lang);
   html = injectBreadcrumb(html, langData, lang, templateSlug);
+  if (templateSlug === 'index') {
+    html = injectFaqSchema(html, langData);
+  }
 
   return html;
 }
@@ -172,9 +176,12 @@ function injectSeoMeta(html, lang) {
   if (headClose === -1) return html;
 
   const metaTags = [
+    `<meta name="robots" content="index, follow">`,
     `<link rel="preconnect" href="https://fonts.googleapis.com">`,
     `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`,
-    `<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">`,
+    `<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">`,
+    `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">`,
+    `<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>`,
     `<link rel="icon" type="image/svg+xml" href="/favicon.svg">`,
     `<link rel="preconnect" href="https://turfonlinecalculator.com">`,
     `<meta property="og:image" content="${ogImage}">`,
@@ -192,9 +199,9 @@ function injectSeoMeta(html, lang) {
 function injectBreadcrumb(html, langData, lang, templateSlug) {
   if (templateSlug === 'index' || templateSlug === '404') return html;
 
-  const homeLabel = langData.nav?.home || 'Home';
+  const homeLabel = (langData.nav?.home || 'Home').replace(/"/g, '\\"');
   const i18nKey = templateSlug.replace(/-/g, '_');
-  const pageLabel = langData[i18nKey]?.h1 || langData[i18nKey]?.meta_title || templateSlug;
+  const pageLabel = (langData[i18nKey]?.h1 || langData[i18nKey]?.meta_title || templateSlug).replace(/"/g, '\\"');
   const homeHref = `/${lang}/`;
 
   const breadcrumbHtml = `<nav aria-label="Breadcrumb" class="breadcrumb"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="${homeHref}">${homeLabel}</a></li><li class="breadcrumb__item breadcrumb__item--current" aria-current="page">${pageLabel}</li></ol></nav>`;
@@ -215,28 +222,22 @@ function injectBreadcrumb(html, langData, lang, templateSlug) {
   return html;
 }
 
-function generateHreflangTags(allLangs, allPages) {
-  let tags = '';
-  for (const lang of allLangs) {
-    const langData = languages[lang];
-    for (const { templateSlug, localizedSlug } of allPages) {
-      const mappedSlug = getLocalizedSlug(langData, templateSlug);
-      if (mappedSlug === localizedSlug) {
-        tags += `<link rel="alternate" hreflang="${lang}" href="${DOMAIN}/${lang}/${localizedSlug === '' ? '' : localizedSlug + '.html'}">\n`;
-        break;
-      }
-    }
+function injectFaqSchema(html, langData) {
+  const faqItems = [];
+  for (let i = 1; i <= 4; i++) {
+    const q = langData.home?.[`popular_question_${i}`];
+    const a = langData.home?.[`popular_answer_${i}`];
+    if (!q || !a) continue;
+    faqItems.push(`{"@type":"Question","name":${JSON.stringify(q)},"acceptedAnswer":{"@type":"Answer","text":${JSON.stringify(a)}}}`);
   }
-  for (const lang of allLangs) {
-    const langData = languages[lang];
-    const mappedSlug = getLocalizedSlug(langData, allPages[0].templateSlug);
-    if (mappedSlug === allPages[0].localizedSlug) {
-      const xDefSlug = mappedSlug === '' ? '' : mappedSlug + '.html';
-      tags += `<link rel="alternate" hreflang="x-default" href="${DOMAIN}/${lang}/${xDefSlug}">\n`;
-      break;
-    }
+  if (faqItems.length === 0) return html;
+
+  const faqLd = `<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[${faqItems.join(',')}]}</script>`;
+  const headClose = html.indexOf('</head>');
+  if (headClose !== -1) {
+    html = html.slice(0, headClose) + faqLd + '\n' + html.slice(headClose);
   }
-  return tags;
+  return html;
 }
 
 function generateHreflangForPage(templateSlug, localizedSlugsByLang, allLangs) {
@@ -261,6 +262,7 @@ function injectHreflangIntoHtml(html, hreflangTags) {
 
 function generateSitemap(allLangs, allPageEntries) {
   const today = new Date().toISOString().split('T')[0];
+  const buildDate = today;
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n';
   xml += '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
@@ -448,8 +450,10 @@ function loadTemplates() {
   }
 }
 
+const LANG_ORDER = ['en', 'zh', 'es', 'ar', 'pt', 'ja', 'de', 'fr', 'ko', 'it', 'tr', 'pl', 'nl', 'sv'];
+
 function buildPages() {
-  const allLangs = Object.keys(languages).sort();
+  const allLangs = LANG_ORDER.filter(l => languages[l]);
   const enData = languages['en'];
   if (!enData) {
     console.error('  Error: English (en.json) is required as the base language');
@@ -478,9 +482,6 @@ function buildPages() {
       if (templateName === 'area-converter') {
         html = html.replace(/\{\{CONV_FROM_UNIT\}\}/g, 'sqft');
         html = html.replace(/\{\{CONV_TO_UNIT\}\}/g, 'sqm');
-        html = html.replace(/\{\{CONV_FROM\}\}/g, '');
-        html = html.replace(/\{\{CONV_TO\}\}/g, '');
-        html = html.replace(/\{\{CONV_FACTOR\}\}/g, '');
       }
 
       const localizedSlugsByLang = {};
