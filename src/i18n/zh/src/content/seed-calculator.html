@@ -1,0 +1,158 @@
+<h1>草籽计算器</h1>
+<p>按草种类型计算您需要的草籽量。涵盖新建草坪和补播，提供每种主要草种的精确覆盖率。</p>
+
+<div class="card">
+<form id="seed-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-area">草坪面积</label>
+      <input type="number" id="seed-area" placeholder="例如 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="seed-unit">单位</label>
+      <select id="seed-unit">
+        <option value="imperial">平方英尺 (sq ft)</option>
+        <option value="metric">平方米 (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-type">草种类型</label>
+      <select id="seed-type">
+        <option value="">选择草种类型</option>
+        <option value="Bahia">巴哈亚草</option>
+        <option value="Bermuda">百慕大草</option>
+        <option value="Centipede">假俭草</option>
+        <option value="Fine Fescue">细羊茅</option>
+        <option value="Kentucky Bluegrass">肯塔基蓝草</option>
+        <option value="Perennial Ryegrass">多年生黑麦草</option>
+        <option value="Tall Fescue">高羊茅</option>
+        <option value="Zoysia">结缕草</option>
+        <option value="Sun & Shade Mix">阴阳混合草种</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="seed-purpose">用途</label>
+      <select id="seed-purpose">
+        <option value="new">新建草坪</option>
+        <option value="overseed">补播（已有草坪）</option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div id="seed-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">您需要</div>
+    <div class="result-value" id="seed-total">--</div>
+    <div class="result-label">总草籽量</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="seed-bags">--</div>
+        <div class="lbl">标准5磅袋</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-rate">--</div>
+        <div class="lbl">播种率</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-sqft">--</div>
+        <div class="lbl">总面积</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>重要提示：</strong>不同草种的播种率差异很大。Bermuda每1,000平方英尺仅需2磅，而Tall Fescue需要10磅。选择错误的播种率是播种项目中最常见的错误。
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">播种前检查清单</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-ph"><label>测试土壤pH值（理想范围：6.0-7.0）</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-kill"><label>清除已有的草和杂草</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-loosen"><label>翻松表层1-2英寸土壤</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-rake"><label>撒种后轻轻耙地覆盖种子</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">完整播种指南 &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">播种后养护</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-moist"><label>保持土壤持续湿润直到发芽</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-traffic"><label>在幼苗建植前避免踩踏</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-mow"><label>草长到3-4英寸时首次修剪</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">完整养护指南 &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/how-to-plant-grass-seed/">正在种草？阅读分步指南</a>
+    <a class="section-link" href="/topsoil-calculator/">表土计算器 &rarr;</a>
+    <a class="section-link" href="/sod-calculator/">草皮计算器</a>
+  </div>
+</div>
+</div>
+
+<h2>我需要多少草籽？</h2>
+<p>您需要的草籽量取决于三个因素：草坪面积、您要种植的草种类型，以及您是播种新草坪还是在已有草坪上补播。不同草种的播种率差异很大。例如，Kentucky Bluegrass新建草坪每1,000平方英尺仅需4磅，而Tall Fescue每1,000平方英尺需要10磅。</p>
+<p>新建草坪请使用较高的"新建草坪"播种率，以确保裸露土壤的全面覆盖。对于在已有草坪上补播，使用较低的播种率，因为您是在填补稀疏区域而非从裸土开始。</p>
+
+<h2>草籽覆盖率</h2>
+<p>不同草种的覆盖率差异显著：</p>
+<div class="card"><table class="data-table">
+  <tr><th>草种类型</th><th>新建草坪 (磅/1,000平方英尺)</th><th>补播 (磅/1,000平方英尺)</th></tr>
+  <tr><td>Bermuda</td><td>2</td><td>1</td></tr>
+  <tr><td>Centipede</td><td>0.5</td><td>0.3</td></tr>
+  <tr><td>Fine Fescue</td><td>5</td><td>2.5</td></tr>
+  <tr><td>Kentucky Bluegrass</td><td>4</td><td>2</td></tr>
+  <tr><td>Perennial Ryegrass</td><td>10</td><td>5</td></tr>
+  <tr><td>Tall Fescue</td><td>10</td><td>5</td></tr>
+  <tr><td>Bahia</td><td>10</td><td>5</td></tr>
+  <tr><td>Zoysia</td><td>2</td><td>1</td></tr>
+  <tr><td>Sun &amp; Shade Mix</td><td>6</td><td>3</td></tr>
+</table></div>
+
+<h2>购买草籽的提示</h2>
+<ul>
+  <li><strong>检查标签</strong>上的发芽率和杂草种子百分比。优质草籽的发芽率应高于85%，杂草种子含量应低于0.5%。</li>
+  <li><strong>尽可能从本地渠道购买。</strong>本地供应商储备的是适应您所在地区气候的品种。</li>
+  <li><strong>将草种与您的条件匹配。</strong>如果院子有遮荫，选择Fine Fescue等耐阴品种。全日照条件下Bermuda或Zoysia表现最佳。</li>
+  <li><strong>妥善储存未使用的种子。</strong>在正常储存条件下，草籽每年约损失10-20%的活力。将剩余种子放在阴凉干燥处的密封容器中。一年内使用可获得最佳效果。</li>
+</ul>
+
+<h2>为什么草籽类型会改变用量？</h2>
+<p>不同草种的种子大小差异很大。Kentucky Bluegrass种子非常小（每磅约200万粒），所以每1,000平方英尺仅需4磅。Tall Fescue种子大得多（每磅约23万粒），同样面积需要10磅。当您选择草种类型时，计算器会自动考虑这些差异。</p>
+
+<h2>常见问题</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">1,000平方英尺需要多少草籽？</div>
+    <div class="faq-a">取决于草种类型。Kentucky Bluegrass新建草坪每1,000平方英尺约需4磅，而Tall Fescue约需10磅。使用上方计算器获取您的草种类型的确切用量。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">新建草坪和补播的用量有什么区别？</div>
+    <div class="faq-a">新建草坪使用较高的播种量以确保裸露土壤的全面覆盖。补播用量约为一半，因为您是在已有草坪中填补稀疏区域。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">我可以混合不同种类的草籽吗？</div>
+    <div class="faq-a">可以，许多商业种子混合物结合了互补的草种。例如，Kentucky Bluegrass与Perennial Ryegrass混合，可提供黑麦草的快速发芽和Bluegrass的长期耐久性。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">种植草籽的最佳时间是什么时候？</div>
+    <div class="faq-a">冷季型草（Fescue、Bluegrass、Ryegrass）在初秋种植最佳，此时土壤温度仍较暖但气温开始下降。暖季型草（Bermuda、Zoysia、Centipede）在春末至夏初种植最佳。</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>相关计算器</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">草皮计算器</a>
+    <a class="section-link" href="/topsoil-calculator/">表土计算器</a>
+    <a class="section-link" href="/mulch-calculator/">覆盖物计算器</a>
+  </div>
+</div>

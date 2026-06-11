@@ -1,0 +1,110 @@
+<h1>覆盖物计算器</h1>
+<p>计算花园苗床、树环和景观项目需要多少覆盖物。获得以立方码或袋数为单位的精确用量。</p>
+
+<div class="card">
+<form id="mulch-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-area">面积</label>
+      <input type="number" id="mulch-area" placeholder="例如 500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="mulch-unit">单位</label>
+      <select id="mulch-unit">
+        <option value="imperial">平方英尺 (sq ft)</option>
+        <option value="metric">平方米 (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-depth">深度 (英寸)</label>
+      <input type="number" id="mulch-depth" value="3" min="1" max="12" step="0.5" required>
+      <span class="hint">建议：3-4英寸</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="mulch-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">您需要</div>
+    <div class="result-value" id="mulch-cy">--</div>
+    <div class="result-label">立方码</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="mulch-bags">--</div>
+        <div class="lbl">袋 (每袋2立方英尺)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="mulch-sqft">--</div>
+        <div class="lbl">该深度下的面积</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>重要提示：</strong>覆盖物要距离树干和植物茎部2-3英寸。将覆盖物堆在树干上（常被称为"火山覆盖"）会积聚水分，导致腐烂和病害。
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">覆盖前检查清单</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-weed"><label>清除区域内已有的杂草</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-moisten"><label>铺覆盖物前浇湿土壤</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-depth"><label>检查现有覆盖物深度 &mdash; 超过4英寸则清除多余部分</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">年度覆盖物维护</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-check"><label>每年检查覆盖物深度 &mdash; 补充至3-4英寸</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-fluff"><label>添加新材料前翻松板结的覆盖物</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-wood"><label>考虑在小径和游乐区使用新鲜木屑</label></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>我需要多少覆盖物？</h2>
+<p>要计算您需要多少覆盖物，使用公式：<strong>立方码 = (面积（平方英尺）&times; 深度（英寸）) &divide; 324</strong>。对于一个500平方英尺、3英寸深的典型花园苗床，您大约需要4.6立方码的覆盖物，约62袋（每袋2立方英尺）。</p>
+
+<h2>理想的覆盖物深度是多少？</h2>
+<p>新铺设时使用<strong>3到4英寸</strong>深的覆盖物。这个深度能有效抑制杂草，同时仍允许水分渗透。对于已有覆盖物，通过每年补充维持3-4英寸的深度，因为有机材料会自然分解。避免覆盖物深度超过4英寸，这可能会限制植物根系的氧气供应。</p>
+<p>选择覆盖物时，请考虑您的目标：木屑和碎树皮等有机覆盖物随时间分解，能改善土壤结构并添加养分。石材或橡胶等无机覆盖物可永久使用，但对土壤健康没有帮助 &mdash; 它们更适合永久通道或不想每年补充的装饰区域。</p>
+<p>一般来说，2-3英寸对大多数花坛和观赏植物种植区就足够了。当杂草抑制是首要任务时，如树木周围或沿围栏线，使用3-4英寸。切勿超过4英寸的覆盖物深度 &mdash; 过多的覆盖物会限制氧气交换导致植物根系窒息，并可能成为鼠类和害虫的栖息地。</p>
+
+<h2>覆盖物覆盖范围 &mdash; 袋装 vs 散装</h2>
+<p>标准袋覆盖物在2英寸深时可覆盖约12平方英尺，3英寸深时约8平方英尺。一立方码覆盖物（27立方英尺）在3英寸深时可覆盖约108平方英尺。对于需要超过5立方码的项目，批量送货通常比购买单袋更实用、更划算。</p>
+
+<h2>常见问题</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">1,000平方英尺需要多少覆盖物？</div>
+    <div class="faq-a">1,000平方英尺、3英寸深大约需要9.3立方码的覆盖物，约125袋（每袋2立方英尺）。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">理想的覆盖物深度是多少？</div>
+    <div class="faq-a">新铺设时覆盖物深度为3-4英寸。随着覆盖物分解，通过每年补充维持3-4英寸的深度。避免覆盖物堆积在树干上。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">多少袋覆盖物等于一立方码？</div>
+    <div class="faq-a">标准袋覆盖物为2立方英尺。需要13.5袋才能等于一立方码（27立方英尺）。超过5立方码的项目，批量送货通常更划算。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">添加新覆盖物前需要清除旧覆盖物吗？</div>
+    <div class="faq-a">除非旧覆盖物形成了阻止水分渗透的板结层，或有真菌生长或虫害迹象，否则不需要清除。大多数情况下，只需翻松旧覆盖物，然后在上面添加新的即可。</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>相关计算器</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">草皮计算器</a>
+    <a class="section-link" href="/grass-seed-calculator/">草籽计算器</a>
+    <a class="section-link" href="/topsoil-calculator/">表土计算器</a>
+  </div>
+</div>

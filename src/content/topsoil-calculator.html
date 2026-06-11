@@ -1,0 +1,121 @@
+<h1>Topsoil Calculator</h1>
+<p>Calculate how much topsoil you need for your lawn project. Whether you are preparing for sod installation or building up garden beds, get the exact amount in cubic yards or bags.</p>
+
+<div class="card">
+<form id="topsoil-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-area">Area</label>
+      <input type="number" id="topsoil-area" placeholder="e.g. 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="topsoil-unit">Unit</label>
+      <select id="topsoil-unit">
+        <option value="imperial">Square Feet (sq ft)</option>
+        <option value="metric">Square Meters (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-depth">Depth (inches)</label>
+      <input type="number" id="topsoil-depth" value="4" min="1" max="24" step="0.5" required>
+      <span class="hint">Recommended: 4 inches for sod preparation</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="topsoil-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">You Need</div>
+    <div class="result-value" id="topsoil-cy">--</div>
+    <div class="result-label">cubic yards</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="topsoil-cf">--</div>
+        <div class="lbl">cubic feet</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-bags">--</div>
+        <div class="lbl">bags (0.75 cu ft)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-sqft">--</div>
+        <div class="lbl">area at depth</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Important:</strong> For projects over 2 cubic yards, bulk delivery from a local supplier is usually far more cost-effective than buying individual bags.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Pre-Spreading Checklist</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-clear"><label>Remove existing grass, weeds, and debris</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-loosen"><label>Loosen existing soil 3-4 inches deep</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-level"><label>Grade for proper drainage away from structures</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">Complete soil preparation guide &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Post-Spreading Checklist</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-compact"><label>Lightly roll or tamp to settle the soil</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-water"><label>Water thoroughly to help soil settle</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-check"><label>Re-check grade before laying sod or seeding</label></div>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Sod Calculator &rarr;</a>
+    <a class="section-link" href="/grass-seed-calculator/">Seed Calculator &rarr;</a>
+  </div>
+</div>
+</div>
+
+<h2>How Much Topsoil Do I Need?</h2>
+<p>To calculate how much topsoil you need, multiply your area (in square feet) by your desired depth (in inches), then divide by 324 to get cubic yards. The formula is: <strong>Cubic Yards = (Area in sq ft &times; Depth in inches) &divide; 324</strong>.</p>
+<p>For example, a 1,000 sq ft lawn at 4 inches deep requires approximately 12.3 cubic yards of topsoil.</p>
+
+<h2>How Deep Should Topsoil Be for Sod?</h2>
+<p>For laying sod, a depth of <strong>4 inches of quality topsoil</strong> is recommended. This gives the sod roots enough depth to establish and access nutrients. If your existing soil is of good quality, 2-3 inches of topsoil may be sufficient as an amendment layer.</p>
+<p>For garden beds, 6-12 inches is ideal to allow deep root growth for vegetables and flowers.</p>
+<p>When buying topsoil, look for dark, crumbly material that smells earthy — not sour or chemical. Screened topsoil has been filtered to remove rocks, roots, and debris, making it ideal for sod preparation and garden beds. Unscreened topsoil is cheaper but may contain clumps and stones that create an uneven surface; it is better suited for filling low spots or large grading projects where you will be spreading a thick layer.</p>
+
+<h2>Soil Calculator &mdash; How Many Bags Make a Yard?</h2>
+<p>A cubic yard of topsoil equals 27 cubic feet. A standard bag of topsoil is 0.75 cubic feet, so you need <strong>36 bags to equal one cubic yard</strong>. For projects larger than about 2 cubic yards, bulk delivery is almost always more practical and cost-effective than buying bags.</p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">How much topsoil do I need for a new lawn?</div>
+    <div class="faq-a">For laying sod, you need about 4 inches of topsoil depth. For 1,000 sq ft at 4 inches deep, you need approximately 12.3 cubic yards of topsoil.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How deep should topsoil be for sod?</div>
+    <div class="faq-a">A depth of 4 inches of quality topsoil is recommended before laying sod. This gives the sod roots enough depth to establish and access nutrients and water.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How many bags of topsoil make a cubic yard?</div>
+    <div class="faq-a">A standard bag of topsoil is 0.75 cubic feet. It takes 36 bags to equal one cubic yard (27 cubic feet). For large projects, bulk delivery is usually more cost effective than bags.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I use garden soil instead of topsoil?</div>
+    <div class="faq-a">Garden soil is typically enriched with compost and organic matter, making it suitable for garden beds but not ideal for sod installation. Use screened topsoil for sod projects to ensure a level, consistent base.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Related Calculators</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Sod Calculator</a>
+    <a class="section-link" href="/grass-seed-calculator/">Seed Calculator</a>
+    <a class="section-link" href="/mulch-calculator/">Mulch Calculator</a>
+  </div>
+</div>

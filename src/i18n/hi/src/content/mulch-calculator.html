@@ -1,0 +1,110 @@
+<h1>मल्च कैलकुलेटर</h1>
+<p>बगीचे की क्यारियों, पेड़ के घेरों और भूदृश्य परियोजनाओं के लिए आपको कितना मल्च चाहिए, इसकी गणना करें। घन गज या बैग में सटीक मात्रा प्राप्त करें।</p>
+
+<div class="card">
+<form id="mulch-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-area">क्षेत्र</label>
+      <input type="number" id="mulch-area" placeholder="जैसे 500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="mulch-unit">इकाई</label>
+      <select id="mulch-unit">
+        <option value="imperial">वर्ग फुट (sq ft)</option>
+        <option value="metric">वर्ग मीटर (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-depth">गहराई (इंच)</label>
+      <input type="number" id="mulch-depth" value="3" min="1" max="12" step="0.5" required>
+      <span class="hint">अनुशंसित: 3-4 इंच</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="mulch-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">आपको चाहिए</div>
+    <div class="result-value" id="mulch-cy">--</div>
+    <div class="result-label">घन गज</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="mulch-bags">--</div>
+        <div class="lbl">बैग (2 घन फुट)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="mulch-sqft">--</div>
+        <div class="lbl">गहराई पर क्षेत्र</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>महत्वपूर्ण:</strong> मल्च को पेड़ के तनों और पौधों के तनों से 2-3 इंच दूर रखें। तनों के खिलाफ मल्च जमा करना (अक्सर "ज्वालामुखी मल्चिंग" कहा जाता है) नमी को फंसाता है और सड़न और बीमारी का कारण बन सकता है।
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">प्री-मल्चिंग चेकलिस्ट</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-weed"><label>क्षेत्र से मौजूदा खरपतवार हटाएं</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-moisten"><label>मल्च लगाने से पहले मिट्टी को पानी दें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-depth"><label>मौजूदा मल्च की गहराई जांचें &mdash; 4 इंच से अधिक होने पर हटाएं</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">वार्षिक मल्च रखरखाव</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-check"><label>सालाना मल्च की गहराई जांचें &mdash; 3-4 इंच तक पुनः भरें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-fluff"><label>नई सामग्री डालने से पहले संकुचित मल्च को फुलाएं</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-wood"><label>पथों और खेल क्षेत्रों के लिए ताजा लकड़ी के चिप्स पर विचार करें</label></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>मुझे कितना मल्च चाहिए?</h2>
+<p>यह गणना करने के लिए कि आपको कितना मल्च चाहिए, सूत्र का उपयोग करें: <strong>घन गज = (वर्ग फुट में क्षेत्र &times; इंच में गहराई) &divide; 324</strong>। 3 इंच गहराई पर 500 वर्ग फुट की एक सामान्य बगीचे की क्यारी के लिए, आपको लगभग 4.6 घन गज मल्च, या लगभग 62 बैग (प्रत्येक 2 घन फुट) की आवश्यकता होगी।</p>
+
+<h2>आदर्श मल्च गहराई क्या है?</h2>
+<p>नए अनुप्रयोगों के लिए <strong>3 से 4 इंच</strong> की गहराई पर मल्च लगाएं। यह गहराई प्रभावी रूप से खरपतवारों को दबाती है जबकि पानी को प्रवेश करने की अनुमति देती है। मौजूदा मल्च के लिए, कार्बनिक पदार्थ के विघटित होने पर सालाना ऊपर से भरकर 3-4 इंच की गहराई बनाए रखें। मल्च की गहराई 4 इंच से अधिक न होने दें, क्योंकि इससे पौधों की जड़ों तक ऑक्सीजन सीमित हो सकती है।</p>
+<p>मल्च चुनते समय, अपने लक्ष्यों पर विचार करें: लकड़ी के चिप्स और कटी हुई छाल जैसे कार्बनिक मल्च समय के साथ विघटित हो जाते हैं, मिट्टी की संरचना में सुधार करते हैं और पोषक तत्व जोड़ते हैं। पत्थर या रबर जैसे अकार्बनिक मल्च अनिश्चित काल तक टिकते हैं लेकिन मिट्टी के स्वास्थ्य के लिए कुछ नहीं करते &mdash; वे स्थायी पथों या सजावटी क्षेत्रों के लिए बेहतर उपयुक्त हैं जहां आप वार्षिक पुनःपूर्ति नहीं चाहते।</p>
+<p>एक सामान्य नियम के रूप में, अधिकांश फूलों की क्यारियों और सजावटी रोपणों के लिए 2-3 इंच पर्याप्त है। जब खरपतवार दमन सर्वोच्च प्राथमिकता हो, जैसे पेड़ों के आसपास या बाड़ की रेखाओं के साथ, 3-4 इंच का उपयोग करें। कभी भी 4 इंच से अधिक मल्च गहराई न रखें &mdash; बहुत अधिक मल्च ऑक्सीजन विनिमय को प्रतिबंधित करके पौधों की जड़ों का दम घोंट सकता है और कृंतकों और कीटों के लिए आवास बना सकता है।</p>
+
+<h2>मल्च कवरेज &mdash; बैग बनाम थोक</h2>
+<p>मल्च का एक मानक बैग 2 इंच गहराई पर लगभग 12 वर्ग फुट, या 3 इंच गहराई पर 8 वर्ग फुट कवर करता है। एक घन गज मल्च (27 घन फुट) 3 इंच गहराई पर लगभग 108 वर्ग फुट कवर करता है। 5 घन गज से अधिक की आवश्यकता वाली परियोजनाओं के लिए, थोक डिलीवरी आमतौर पर अलग-अलग बैग खरीदने की तुलना में अधिक व्यावहारिक और किफायती होती है।</p>
+
+<h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">1,000 वर्ग फुट के लिए मुझे कितना मल्च चाहिए?</div>
+    <div class="faq-a">3 इंच गहराई पर 1,000 वर्ग फुट के लिए, आपको लगभग 9.3 घन गज मल्च, या लगभग 125 बैग (प्रत्येक 2 घन फुट) चाहिए।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">आदर्श मल्च गहराई कितनी है?</div>
+    <div class="faq-a">नए अनुप्रयोगों के लिए 3-4 इंच की गहराई पर मल्च लगाएं। मौजूदा मल्च को विघटित होने पर सालाना ऊपर से भरकर 3-4 इंच पर बनाए रखें। पेड़ के तनों के खिलाफ मल्च जमा करने से बचें।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">एक घन गज के बराबर मल्च के कितने बैग होते हैं?</div>
+    <div class="faq-a">मल्च का एक मानक बैग 2 घन फुट का होता है। एक घन गज (27 घन फुट) के बराबर 13.5 बैग लगते हैं। 5 घन गज से बड़ी परियोजनाओं के लिए, थोक डिलीवरी आमतौर पर अधिक किफायती होती है।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">क्या मुझे नया मल्च डालने से पहले पुराना मल्च हटाना चाहिए?</div>
+    <div class="faq-a">आपको पुराना मल्च हटाने की आवश्यकता नहीं है जब तक कि इसने पानी के प्रवेश को रोकने वाली एक उलझी हुई परत न बना ली हो, या यदि फंगल वृद्धि या कीट समस्याओं के संकेत हों। अधिकांश मामलों में, बस पुराने मल्च को फुलाएं और ऊपर से नया डालें।</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>संबंधित कैलकुलेटर</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">सॉड कैलकुलेटर</a>
+    <a class="section-link" href="/grass-seed-calculator/">बीज कैलकुलेटर</a>
+    <a class="section-link" href="/topsoil-calculator/">ऊपरी मिट्टी कैलकुलेटर</a>
+  </div>
+</div>

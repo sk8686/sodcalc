@@ -1,0 +1,158 @@
+<h1>Calculadora de Semillas de Pasto</h1>
+<p>Calcule cuánta semilla de pasto necesita por tipo de pasto. Cubre céspedes nuevos y resiembra con tasas de cobertura precisas para cada variedad principal de pasto.</p>
+
+<div class="card">
+<form id="seed-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-area">Área del Césped</label>
+      <input type="number" id="seed-area" placeholder="ej. 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="seed-unit">Unidad</label>
+      <select id="seed-unit">
+        <option value="imperial">Pies Cuadrados (pies²)</option>
+        <option value="metric">Metros Cuadrados (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-type">Tipo de Pasto</label>
+      <select id="seed-type">
+        <option value="">Seleccionar tipo de pasto</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Centipede">Centipede</option>
+        <option value="Fine Fescue">Fine Fescue</option>
+        <option value="Kentucky Bluegrass">Kentucky Bluegrass</option>
+        <option value="Perennial Ryegrass">Perennial Ryegrass</option>
+        <option value="Tall Fescue">Tall Fescue</option>
+        <option value="Zoysia">Zoysia</option>
+        <option value="Sun & Shade Mix">Sun &amp; Shade Mix</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="seed-purpose">Propósito</label>
+      <select id="seed-purpose">
+        <option value="new">Césped Nuevo</option>
+        <option value="overseed">Resiembra (césped existente)</option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div id="seed-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">Necesita</div>
+    <div class="result-value" id="seed-total">--</div>
+    <div class="result-label">semilla total</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="seed-bags">--</div>
+        <div class="lbl">bolsas estándar de 5 lb</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-rate">--</div>
+        <div class="lbl">tasa de cobertura</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-sqft">--</div>
+        <div class="lbl">área total</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Importante:</strong> Los diferentes tipos de pasto tienen tasas de siembra muy diferentes. Bermuda necesita solo 2 lb por 1,000 pies² mientras que Tall Fescue necesita 10 lb. Seleccionar la tasa incorrecta es el error más común en proyectos de siembra.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Lista de Verificación Previa a la Siembra</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-ph"><label>Probar el pH del suelo (rango ideal: 6.0-7.0)</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-kill"><label>Eliminar el pasto y las malas hierbas existentes</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-loosen"><label>Aflojar las 1-2 pulgadas superiores del suelo</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-rake"><label>Rastrillar ligeramente después de esparcir la semilla para cubrirla</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Guía completa de siembra &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Cuidado Post-Siembra</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-moist"><label>Mantener el suelo consistentemente húmedo hasta la germinación</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-traffic"><label>Evitar el tránsito peatonal hasta que las plántulas estén establecidas</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-mow"><label>Primer corte cuando el pasto alcance 3-4 pulgadas</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Guía completa de cuidado &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/how-to-plant-grass-seed/">¿Va a sembrar? Lea la guía paso a paso</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculadora de Tierra Vegetal &rarr;</a>
+    <a class="section-link" href="/sod-calculator/">Calculadora de Césped</a>
+  </div>
+</div>
+</div>
+
+<h2>¿Cuánta Semilla de Pasto Necesito?</h2>
+<p>La cantidad de semilla de pasto que necesita depende de tres factores: el tamaño de su césped, el tipo de pasto que está plantando y si está sembrando un césped nuevo o resembrando uno existente. Los diferentes tipos de pasto tienen tasas de siembra drásticamente diferentes. Por ejemplo, Kentucky Bluegrass requiere solo 4 lb por 1,000 pies cuadrados para un césped nuevo, mientras que Tall Fescue requiere 10 lb por 1,000 pies cuadrados.</p>
+<p>Para céspedes nuevos, use la tasa más alta de "césped nuevo" para asegurar una cobertura completa en suelo desnudo. Para resembrar un césped existente, use la tasa más baja ya que está rellenando áreas delgadas en lugar de comenzar desde suelo desnudo.</p>
+
+<h2>Tasas de Cobertura de Semillas de Pasto</h2>
+<p>Las tasas de cobertura varían significativamente según el tipo de pasto:</p>
+<div class="card"><table class="data-table">
+  <tr><th>Tipo de Pasto</th><th>Césped Nuevo (lb/1,000 pies²)</th><th>Resiembra (lb/1,000 pies²)</th></tr>
+  <tr><td>Bermuda</td><td>2</td><td>1</td></tr>
+  <tr><td>Centipede</td><td>0.5</td><td>0.3</td></tr>
+  <tr><td>Fine Fescue</td><td>5</td><td>2.5</td></tr>
+  <tr><td>Kentucky Bluegrass</td><td>4</td><td>2</td></tr>
+  <tr><td>Perennial Ryegrass</td><td>10</td><td>5</td></tr>
+  <tr><td>Tall Fescue</td><td>10</td><td>5</td></tr>
+  <tr><td>Bahia</td><td>10</td><td>5</td></tr>
+  <tr><td>Zoysia</td><td>2</td><td>1</td></tr>
+  <tr><td>Sun &amp; Shade Mix</td><td>6</td><td>3</td></tr>
+</table></div>
+
+<h2>Consejos para Comprar Semillas de Pasto</h2>
+<ul>
+  <li><strong>Revise la etiqueta</strong> para ver la tasa de germinación y el porcentaje de semillas de malas hierbas. La semilla de calidad debe tener una tasa de germinación superior al 85% y un contenido de semillas de malas hierbas inferior al 0.5%.</li>
+  <li><strong>Compre de una fuente local</strong> cuando sea posible. Los proveedores locales tienen variedades adaptadas a su clima regional.</li>
+  <li><strong>Adapte el pasto a sus condiciones.</strong> Si su jardín tiene sombra, elija una variedad tolerante a la sombra como Fine Fescue. Para pleno sol, Bermuda o Zoysia rinden mejor.</li>
+  <li><strong>Almacene las semillas sobrantes correctamente.</strong> La semilla de pasto pierde aproximadamente un 10-20% de viabilidad por año en condiciones normales de almacenamiento. Guarde las semillas sobrantes en un lugar fresco y seco en un recipiente sellado. Úselas dentro de un año para obtener los mejores resultados.</li>
+</ul>
+
+<h2>¿Por Qué el Tipo de Semilla Cambia Cuánto Necesito?</h2>
+<p>Las diferentes especies de pasto tienen tamaños de semilla drásticamente diferentes. Las semillas de Kentucky Bluegrass son diminutas (aproximadamente 2 millones de semillas por libra), por lo que solo necesita 4 lb para cubrir 1,000 pies². Las semillas de Tall Fescue son mucho más grandes (aproximadamente 230,000 semillas por libra), requiriendo 10 lb para la misma área. La calculadora tiene en cuenta estas diferencias automáticamente cuando selecciona su tipo de pasto.</p>
+
+<h2>Preguntas Frecuentes</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">¿Cuánta semilla de pasto necesito para 1,000 pies²?</div>
+    <div class="faq-a">Depende del tipo de pasto. Kentucky Bluegrass requiere aproximadamente 4 lb por cada 1,000 pies² para un césped nuevo, mientras que Tall Fescue requiere aproximadamente 10 lb. Use la calculadora de arriba para obtener la cantidad exacta para su tipo de pasto.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Cuál es la diferencia entre las tasas de césped nuevo y resiembra?</div>
+    <div class="faq-a">La siembra de césped nuevo usa una tasa más alta para asegurar una cobertura completa en suelo desnudo. La resiembra usa aproximadamente la mitad de la tasa, ya que está rellenando áreas delgadas dentro de un césped existente.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Puedo mezclar diferentes tipos de semillas de pasto?</div>
+    <div class="faq-a">Sí, muchas mezclas comerciales de semillas combinan tipos de pasto complementarios. Por ejemplo, Kentucky Bluegrass mezclado con Perennial Ryegrass proporciona germinación rápida del ryegrass y durabilidad a largo plazo del bluegrass.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Cuándo es el mejor momento para plantar semillas de pasto?</div>
+    <div class="faq-a">Plante pastos de temporada fría (Fescue, Bluegrass, Ryegrass) a principios de otoño cuando las temperaturas del suelo aún son cálidas pero las temperaturas del aire se están enfriando. Plante pastos de temporada cálida (Bermuda, Zoysia, Centipede) desde finales de primavera hasta principios de verano.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Calculadoras Relacionadas</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Calculadora de Césped</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculadora de Tierra Vegetal</a>
+    <a class="section-link" href="/mulch-calculator/">Calculadora de Mantillo</a>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<h1>Mulch Calculator</h1>
+<p>Calculate how much mulch you need for garden beds, tree rings, and landscaping projects. Get the exact amount in cubic yards or bags.</p>
+
+<div class="card">
+<form id="mulch-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-area">Area</label>
+      <input type="number" id="mulch-area" placeholder="e.g. 500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="mulch-unit">Unit</label>
+      <select id="mulch-unit">
+        <option value="imperial">Square Feet (sq ft)</option>
+        <option value="metric">Square Meters (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-depth">Depth (inches)</label>
+      <input type="number" id="mulch-depth" value="3" min="1" max="12" step="0.5" required>
+      <span class="hint">Recommended: 3-4 inches</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="mulch-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">You Need</div>
+    <div class="result-value" id="mulch-cy">--</div>
+    <div class="result-label">cubic yards</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="mulch-bags">--</div>
+        <div class="lbl">bags (2 cu ft)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="mulch-sqft">--</div>
+        <div class="lbl">area at depth</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Important:</strong> Keep mulch 2-3 inches away from tree trunks and plant stems. Piling mulch against trunks (often called "volcano mulching") traps moisture and can cause rot and disease.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Pre-Mulching Checklist</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-weed"><label>Remove existing weeds from the area</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-moisten"><label>Water the soil before applying mulch</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-depth"><label>Check existing mulch depth &mdash; remove excess if over 4 inches</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Annual Mulch Maintenance</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-check"><label>Check mulch depth annually &mdash; replenish to 3-4 inches</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-fluff"><label>Fluff compacted mulch before adding new material</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-wood"><label>Consider fresh wood chips for paths and play areas</label></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>How Much Mulch Do I Need?</h2>
+<p>To calculate how much mulch you need, use the formula: <strong>Cubic Yards = (Area in sq ft &times; Depth in inches) &divide; 324</strong>. For a typical garden bed of 500 square feet at 3 inches deep, you will need approximately 4.6 cubic yards of mulch, or about 62 bags (2 cubic feet each).</p>
+
+<h2>What Is the Ideal Mulch Depth?</h2>
+<p>Apply mulch at a depth of <strong>3 to 4 inches</strong> for new applications. This depth suppresses weeds effectively while still allowing water to penetrate. For existing mulch, maintain the 3-4 inch depth by topping up annually as the organic material decomposes. Avoid letting mulch depth exceed 4 inches, as this can restrict oxygen to plant roots.</p>
+<p>When choosing mulch, consider your goals: organic mulches like wood chips and shredded bark break down over time, improving soil structure and adding nutrients. Inorganic mulches like stone or rubber last indefinitely but do nothing for soil health — they are better suited for permanent pathways or decorative areas where you do not want annual replenishment.</p>
+<p>As a rule of thumb, 2-3 inches is sufficient for most flower beds and ornamental plantings. Use 3-4 inches when weed suppression is a top priority, such as around trees or along fence lines. Never exceed 4 inches of mulch depth — too much mulch can suffocate plant roots by restricting oxygen exchange and can create a habitat for rodents and pests.</p>
+
+<h2>Mulch Coverage &mdash; Bags vs Bulk</h2>
+<p>A standard bag of mulch covers approximately 12 square feet at 2 inches deep, or 8 square feet at 3 inches deep. A cubic yard of mulch (27 cubic feet) covers approximately 108 square feet at 3 inches deep. For projects requiring more than 5 cubic yards, bulk delivery is typically more practical and cost-effective than purchasing individual bags.</p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">How much mulch do I need for 1,000 sq ft?</div>
+    <div class="faq-a">For 1,000 square feet at 3 inches deep, you need approximately 9.3 cubic yards of mulch, or about 125 bags (2 cu ft each).</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is the ideal mulch depth?</div>
+    <div class="faq-a">Apply mulch at a depth of 3-4 inches for new applications. Maintain existing mulch at 3-4 inches by topping up annually as it decomposes. Avoid piling mulch against tree trunks.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How many bags of mulch equal a cubic yard?</div>
+    <div class="faq-a">A standard bag of mulch is 2 cubic feet. It takes 13.5 bags to equal one cubic yard (27 cubic feet). For projects larger than 5 cubic yards, bulk delivery is typically more cost effective.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Should I remove old mulch before adding new?</div>
+    <div class="faq-a">You do not need to remove old mulch unless it has formed a matted layer that prevents water penetration, or if there are signs of fungal growth or pest issues. In most cases, simply fluff the old mulch and add new on top.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Related Calculators</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Sod Calculator</a>
+    <a class="section-link" href="/grass-seed-calculator/">Seed Calculator</a>
+    <a class="section-link" href="/topsoil-calculator/">Topsoil Calculator</a>
+  </div>
+</div>

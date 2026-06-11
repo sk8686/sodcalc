@@ -1,0 +1,158 @@
+<h1>Calculadora de Sementes de Grama</h1>
+<p>Calcule quanta semente de grama você precisa por tipo de grama. Abrange novos gramados e ressemeação com taxas de cobertura precisas para cada variedade principal de grama.</p>
+
+<div class="card">
+<form id="seed-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-area">Área do Gramado</label>
+      <input type="number" id="seed-area" placeholder="ex: 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="seed-unit">Unidade</label>
+      <select id="seed-unit">
+        <option value="imperial">Pés Quadrados (pés²)</option>
+        <option value="metric">Metros Quadrados (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-type">Tipo de Grama</label>
+      <select id="seed-type">
+        <option value="">Selecione o tipo de grama</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Centipede">Centipede</option>
+        <option value="Fine Fescue">Fine Fescue</option>
+        <option value="Kentucky Bluegrass">Kentucky Bluegrass</option>
+        <option value="Perennial Ryegrass">Perennial Ryegrass</option>
+        <option value="Tall Fescue">Tall Fescue</option>
+        <option value="Zoysia">Zoysia</option>
+        <option value="Sun & Shade Mix">Sun &amp; Shade Mix</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="seed-purpose">Finalidade</label>
+      <select id="seed-purpose">
+        <option value="new">Novo Gramado</option>
+        <option value="overseed">Ressemeação (gramado existente)</option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div id="seed-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">Você Precisa</div>
+    <div class="result-value" id="seed-total">--</div>
+    <div class="result-label">total de sementes</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="seed-bags">--</div>
+        <div class="lbl">sacos padrão de 5 lb</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-rate">--</div>
+        <div class="lbl">taxa de cobertura</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-sqft">--</div>
+        <div class="lbl">área total</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Importante:</strong> Diferentes tipos de grama têm taxas de semeadura muito diferentes. Bermuda precisa de apenas 2 lb por 1.000 pés², enquanto Tall Fescue precisa de 10 lb. Selecionar a taxa errada é o erro mais comum em projetos de semeadura.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Checklist de Pré-Semeadura</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-ph"><label>Testar o pH do solo (faixa ideal: 6,0-7,0)</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-kill"><label>Remover grama e ervas daninhas existentes</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-loosen"><label>Soltar os 2,5-5 cm superiores do solo</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-rake"><label>Rastelar levemente após espalhar as sementes para cobri-las</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Guia completo de semeadura &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Cuidados Pós-Semeadura</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-moist"><label>Manter o solo consistentemente úmido até a germinação</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-traffic"><label>Evitar tráfego de pessoas até que as mudas estejam estabelecidas</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-mow"><label>Primeiro corte quando a grama atingir 7-10 cm</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Guia completo de cuidados &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/how-to-plant-grass-seed/">Vai plantar sementes? Leia o guia passo a passo</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculadora de Terra Vegetal &rarr;</a>
+    <a class="section-link" href="/sod-calculator/">Calculadora de Grama</a>
+  </div>
+</div>
+</div>
+
+<h2>Quanta Semente de Grama Preciso?</h2>
+<p>A quantidade de semente de grama que você precisa depende de três fatores: o tamanho do seu gramado, o tipo de grama que você está plantando e se você está semeando um novo gramado ou ressemeando um existente. Diferentes tipos de grama têm taxas de semeadura dramaticamente diferentes. Por exemplo, Kentucky Bluegrass requer apenas 4 lb por 1.000 pés quadrados para um novo gramado, enquanto Tall Fescue requer 10 lb por 1.000 pés quadrados.</p>
+<p>Para novos gramados, use a taxa mais alta de "novo gramado" para garantir cobertura total em solo nu. Para ressemeação de um gramado existente, use a taxa mais baixa, pois você está preenchendo áreas ralas em vez de começar do solo nu.</p>
+
+<h2>Taxas de Cobertura de Sementes de Grama</h2>
+<p>As taxas de cobertura variam significativamente por tipo de grama:</p>
+<div class="card"><table class="data-table">
+  <tr><th>Tipo de Grama</th><th>Novo Gramado (lb/1.000 pés²)</th><th>Ressemeação (lb/1.000 pés²)</th></tr>
+  <tr><td>Bermuda</td><td>2</td><td>1</td></tr>
+  <tr><td>Centipede</td><td>0,5</td><td>0,3</td></tr>
+  <tr><td>Fine Fescue</td><td>5</td><td>2,5</td></tr>
+  <tr><td>Kentucky Bluegrass</td><td>4</td><td>2</td></tr>
+  <tr><td>Perennial Ryegrass</td><td>10</td><td>5</td></tr>
+  <tr><td>Tall Fescue</td><td>10</td><td>5</td></tr>
+  <tr><td>Bahia</td><td>10</td><td>5</td></tr>
+  <tr><td>Zoysia</td><td>2</td><td>1</td></tr>
+  <tr><td>Sun &amp; Shade Mix</td><td>6</td><td>3</td></tr>
+</table></div>
+
+<h2>Dicas para Comprar Sementes de Grama</h2>
+<ul>
+  <li><strong>Verifique o rótulo</strong> para a taxa de germinação e a porcentagem de sementes de ervas daninhas. Sementes de qualidade devem ter taxa de germinação acima de 85% e conteúdo de sementes de ervas daninhas abaixo de 0,5%.</li>
+  <li><strong>Compre de uma fonte local</strong> sempre que possível. Fornecedores locais têm variedades adaptadas ao seu clima regional.</li>
+  <li><strong>Combine a grama com suas condições.</strong> Se o seu quintal tem sombra, escolha uma variedade tolerante à sombra como Fine Fescue. Para sol pleno, Bermuda ou Zoysia têm melhor desempenho.</li>
+  <li><strong>Armazene sementes não utilizadas adequadamente.</strong> Sementes de grama perdem cerca de 10-20% de viabilidade por ano em condições normais de armazenamento. Mantenha as sementes restantes em local fresco e seco, em recipiente fechado. Use dentro de um ano para melhores resultados.</li>
+</ul>
+
+<h2>Por Que o Tipo de Semente Muda a Quantidade Que Preciso?</h2>
+<p>Diferentes espécies de grama têm tamanhos de sementes dramaticamente diferentes. As sementes de Kentucky Bluegrass são minúsculas (cerca de 2 milhões de sementes por libra), então você só precisa de 4 lb para cobrir 1.000 pés². As sementes de Tall Fescue são muito maiores (cerca de 230.000 sementes por libra), exigindo 10 lb para a mesma área. A calculadora considera essas diferenças automaticamente quando você seleciona o tipo de grama.</p>
+
+<h2>Perguntas Frequentes</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">Quanta semente de grama preciso para 1.000 pés quadrados?</div>
+    <div class="faq-a">Depende do tipo de grama. Kentucky Bluegrass requer cerca de 4 lb por 1.000 pés² para um novo gramado, enquanto Tall Fescue requer cerca de 10 lb. Use a calculadora acima para obter a quantidade exata para o seu tipo de grama.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Qual é a diferença entre as taxas de novo gramado e ressemeação?</div>
+    <div class="faq-a">A semeadura de novo gramado usa uma taxa mais alta para garantir cobertura total em solo nu. A ressemeação usa aproximadamente metade da taxa, pois você está preenchendo áreas ralas em um gramado existente.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Posso misturar diferentes tipos de sementes de grama?</div>
+    <div class="faq-a">Sim, muitas misturas comerciais de sementes combinam tipos de grama complementares. Por exemplo, Kentucky Bluegrass misturado com Perennial Ryegrass proporciona germinação rápida do ryegrass e durabilidade a longo prazo do bluegrass.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Qual é a melhor época para plantar sementes de grama?</div>
+    <div class="faq-a">Plante gramas de estação fria (Fescue, Bluegrass, Ryegrass) no início do outono, quando as temperaturas do solo ainda estão quentes, mas as temperaturas do ar estão esfriando. Plante gramas de estação quente (Bermuda, Zoysia, Centipede) no final da primavera até o início do verão.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Calculadoras Relacionadas</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Calculadora de Grama</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculadora de Terra Vegetal</a>
+    <a class="section-link" href="/mulch-calculator/">Calculadora de Cobertura Morta</a>
+  </div>
+</div>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>芝生の種計算機 - どのくらいの種が必要？</title>
+<meta name="description" content="芝生の種類別に必要な種の量を計算します。新規芝生とオーバーシードに対応。種まきチェックリストとヒント付きの無料計算機。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sodcalc.com/ja/grass-seed-calculator/">
+<meta property="og:title" content="芝生の種計算機 - どのくらいの種が必要？">
+<meta property="og:description" content="芝生の種類別に必要な種の量を計算します。新規芝生とオーバーシードに対応。種まきチェックリストとヒント付きの無料計算機。">
+<meta property="og:url" content="https://sodcalc.com/ja/grass-seed-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SodCalc">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://sodcalc.com/grass-seed-calculator/">
+<link rel="alternate" hreflang="zh-CN" href="https://sodcalc.com/zh/grass-seed-calculator/">
+<link rel="alternate" hreflang="es" href="https://sodcalc.com/es/grass-seed-calculator/">
+<link rel="alternate" hreflang="hi" href="https://sodcalc.com/hi/grass-seed-calculator/">
+<link rel="alternate" hreflang="ar" href="https://sodcalc.com/ar/grass-seed-calculator/">
+<link rel="alternate" hreflang="pt" href="https://sodcalc.com/pt/grass-seed-calculator/">
+<link rel="alternate" hreflang="fr" href="https://sodcalc.com/fr/grass-seed-calculator/">
+<link rel="alternate" hreflang="ja" href="https://sodcalc.com/ja/grass-seed-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://sodcalc.com/grass-seed-calculator/">
+<link rel="stylesheet" href="/ja/css/styles.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1,000平方フィートに必要な芝生の種の量は？","acceptedAnswer":{"@type":"Answer","text":"芝生の種類によって異なります。ケンタッキーブルーグラスは新規芝生で1,000平方フィートあたり約4ポンド、トールフェスクは約10ポンド必要です。正確な量は計算機を使用してください。"}},{"@type":"Question","name":"新規芝生とオーバーシードの散布量の違いは？","acceptedAnswer":{"@type":"Answer","text":"新規芝生の種まきは、裸の土を完全に覆うためにより高い散布量を使用します。オーバーシードは、既存の芝生の薄い部分を補うため、約半分の散布量を使用します。"}},{"@type":"Question","name":"異なる種類の芝生の種を混ぜてもいいですか？","acceptedAnswer":{"@type":"Answer","text":"はい、多くの市販の種ミックスは補完的な芝生の種類を組み合わせています。ケンタッキーブルーグラスとペレニアルライグラスを混ぜると、素早い発芽と長期的な耐久性が得られます。"}},{"@type":"Question","name":"芝生の種を植える最適な時期は？","acceptedAnswer":{"@type":"Answer","text":"寒地型芝生は初秋に植えてください。暖地型芝生は晩春から初夏に植えてください。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://sodcalc.com/ja/"},{"@type":"ListItem","position":2,"name":"Grass Seed Calculator","item":"https://sodcalc.com/ja/grass-seed-calculator/"}]}]</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">コンテンツにスキップ</a>
+<nav class="nav" aria-label="メインナビゲーション">
+  <div class="nav-inner">
+    <a href="/ja/" class="nav-logo">SodCalc</a>
+    <button class="nav-toggle" aria-label="ナビゲーション切替">&#9776;</button>
+    <div class="nav-menu">
+      <a href="/ja/sod-calculator/">芝生計算機</a>
+      <a href="/ja/grass-seed-calculator/">種子計算機</a>
+      <a href="/ja/sod-vs-seed/">芝生vs種子</a>
+      <a href="/ja/grass-types/">芝生の種類</a>
+      <a href="/ja/how-to-lay-sod/">芝生の敷き方</a>
+      <a href="/ja/common-sod-mistakes/">よくある失敗</a>
+    </div>
+    <div class="lang-select">
+      <button class="lang-btn" aria-label="言語を選択" aria-expanded="false">JA</button>
+      <div class="lang-dropdown">
+        <a href="/">English</a>
+        <a href="/zh/">中文</a>
+        <a href="/es/">Español</a>
+        <a href="/hi/">हिन्दी</a>
+        <a href="/ar/">العربية</a>
+        <a href="/pt/">Português</a>
+        <a href="/fr/">Français</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="container" id="main-content"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/ja/">ホーム</a> <span aria-current="page"> &rsaquo; Grass Seed Calculator</span></nav><!-- content --><h1>芝生の種計算機</h1>
+<p>芝生の種類別に必要な種子の量を計算します。すべての主要な芝生品種の正確な散布量で、新規芝生とオーバーシードの両方に対応。</p>
+
+<div class="card">
+<form id="seed-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-area">芝生の面積</label>
+      <input type="number" id="seed-area" placeholder="例: 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="seed-unit">単位</label>
+      <select id="seed-unit">
+        <option value="imperial">平方フィート (sq ft)</option>
+        <option value="metric">平方メートル (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-type">芝生の種類</label>
+      <select id="seed-type">
+        <option value="">芝生の種類を選択</option>
+        <option value="Bahia">バヒア</option>
+        <option value="Bermuda">バミューダ</option>
+        <option value="Centipede">センチピード</option>
+        <option value="Fine Fescue">ファインフェスク</option>
+        <option value="Kentucky Bluegrass">ケンタッキーブルーグラス</option>
+        <option value="Perennial Ryegrass">ペレニアルライグラス</option>
+        <option value="Tall Fescue">トールフェスク</option>
+        <option value="Zoysia">ゾイシア</option>
+        <option value="Sun & Shade Mix">日向・日陰ミックス</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="seed-purpose">目的</label>
+      <select id="seed-purpose">
+        <option value="new">新規芝生</option>
+        <option value="overseed">オーバーシード（既存の芝生）</option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div id="seed-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">必要量</div>
+    <div class="result-value" id="seed-total">--</div>
+    <div class="result-label">総種子量</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="seed-bags">--</div>
+        <div class="lbl">標準5ポンド袋</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-rate">--</div>
+        <div class="lbl">散布量</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-sqft">--</div>
+        <div class="lbl">総面積</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>重要:</strong> 芝生の種類によって散布量は大きく異なります。バミューダは1,000平方フィートあたり2ポンドしか必要としませんが、トールフェスクは10ポンド必要です。間違った散布量を選ぶことは、種まきプロジェクトで最もよくある失敗です。
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">種まき前チェックリスト</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-ph"><label>土壌pHをテストする（理想範囲：6.0-7.0）</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-kill"><label>既存の草や雑草を取り除く</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-loosen"><label>表層1〜2インチの土をほぐす</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-rake"><label>種をまいた後、軽くレーキをかけて覆う</label></div>
+      <a class="checklist-link" href="/ja/how-to-plant-grass-seed/">完全な種まきガイド &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">種まき後の手入れ</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-moist"><label>発芽まで土壌を常に湿らせておく</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-traffic"><label>苗が定着するまで歩行を避ける</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-mow"><label>芝生が3〜4インチに達したら最初の芝刈り</label></div>
+      <a class="checklist-link" href="/ja/how-to-plant-grass-seed/">完全な手入れガイド &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/ja/how-to-plant-grass-seed/">種をまく予定ですか？ステップバイステップガイドを読む</a>
+    <a class="section-link" href="/ja/topsoil-calculator/">表土計算機 &rarr;</a>
+    <a class="section-link" href="/ja/sod-calculator/">芝生計算機</a>
+  </div>
+</div>
+</div>
+
+<h2>必要な芝生の種の量は？</h2>
+<p>必要な芝生の種の量は3つの要因によって決まります：芝生のサイズ、植える芝生の種類、新規芝生か既存芝生へのオーバーシードかです。芝生の種類によって散布量は劇的に異なります。例えば、ケンタッキーブルーグラスは新規芝生で1,000平方フィートあたり4ポンドしか必要としませんが、トールフェスクは1,000平方フィートあたり10ポンド必要です。</p>
+<p>新規芝生の場合は、裸の土を完全に覆うために高い「新規芝生」散布量を使用してください。既存の芝生へのオーバーシードの場合は、裸の土から始めるのではなく薄い部分を補うため、より低い散布量を使用します。</p>
+
+<h2>芝生の種の散布量</h2>
+<p>散布量は芝生の種類によって大きく異なります：</p>
+<div class="card"><table class="data-table">
+  <tr><th>芝生の種類</th><th>新規芝生 (ポンド/1,000 平方フィート)</th><th>オーバーシード (ポンド/1,000 平方フィート)</th></tr>
+  <tr><td>バミューダ</td><td>2</td><td>1</td></tr>
+  <tr><td>センチピード</td><td>0.5</td><td>0.3</td></tr>
+  <tr><td>ファインフェスク</td><td>5</td><td>2.5</td></tr>
+  <tr><td>ケンタッキーブルーグラス</td><td>4</td><td>2</td></tr>
+  <tr><td>ペレニアルライグラス</td><td>10</td><td>5</td></tr>
+  <tr><td>トールフェスク</td><td>10</td><td>5</td></tr>
+  <tr><td>バヒア</td><td>10</td><td>5</td></tr>
+  <tr><td>ゾイシア</td><td>2</td><td>1</td></tr>
+  <tr><td>日向・日陰ミックス</td><td>6</td><td>3</td></tr>
+</table></div>
+
+<h2>芝生の種を購入する際のヒント</h2>
+<ul>
+  <li><strong>ラベルを確認する</strong> &mdash; 発芽率と雑草種子の割合をチェック。品質の良い種子は発芽率が85%以上、雑草種子含有量が0.5%未満であるべきです。</li>
+  <li><strong>可能であれば地元で購入する。</strong> 地元の販売店は、あなたの地域の気候に適応した品種を在庫しています。</li>
+  <li><strong>芝生を条件に合わせる。</strong> 庭に日陰がある場合は、ファインフェスクのような日陰耐性のある品種を選びましょう。日当たりの良い場所には、バミューダやゾイシアが最適です。</li>
+  <li><strong>残った種子は適切に保管する。</strong> 芝生の種子は通常の保管条件下で年間約10〜20%の発芽率が低下します。残った種子は涼しく乾燥した場所で密閉容器に入れて保管してください。最良の結果を得るには1年以内に使用してください。</li>
+</ul>
+
+<h2>なぜ種子の種類によって必要な量が変わるのですか？</h2>
+<p>芝生の種類によって種子のサイズが劇的に異なります。ケンタッキーブルーグラスの種子は非常に小さく（1ポンドあたり約200万粒）、1,000平方フィートを覆うのに4ポンドしか必要ありません。トールフェスクの種子ははるかに大きく（1ポンドあたり約23万粒）、同じ面積に10ポンド必要です。計算機は芝生の種類を選択するとこれらの違いを自動的に考慮します。</p>
+
+<h2>よくある質問</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">1,000平方フィートに必要な芝生の種の量は？</div>
+    <div class="faq-a">芝生の種類によって異なります。ケンタッキーブルーグラスは新規芝生で1,000平方フィートあたり約4ポンド、トールフェスクは約10ポンド必要です。正確な量は上記の計算機を使用してください。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">新規芝生とオーバーシードの散布量の違いは？</div>
+    <div class="faq-a">新規芝生の種まきは、裸の土を完全に覆うためにより高い散布量を使用します。オーバーシードは、既存の芝生の薄い部分を補うため、約半分の散布量を使用します。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">異なる種類の芝生の種を混ぜてもいいですか？</div>
+    <div class="faq-a">はい、多くの市販の種ミックスは補完的な芝生の種類を組み合わせています。例えば、ケンタッキーブルーグラスとペレニアルライグラスを混ぜると、ライグラスの素早い発芽とブルーグラスの長期的な耐久性が得られます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">芝生の種を植える最適な時期は？</div>
+    <div class="faq-a">寒地型芝生（フェスク、ブルーグラス、ライグラス）は、土壌温度がまだ暖かく気温が下がり始める初秋に植えてください。暖地型芝生（バミューダ、ゾイシア、センチピード）は晩春から初夏に植えてください。</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>関連計算機</h2>
+  <div class="section-links">
+    <a class="section-link" href="/ja/sod-calculator/">芝生計算機</a>
+    <a class="section-link" href="/ja/topsoil-calculator/">表土計算機</a>
+    <a class="section-link" href="/ja/mulch-calculator/">マルチ計算機</a>
+  </div>
+</div><!-- /content -->
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/ja/">ホーム</a>
+      <a href="/ja/sod-calculator/">芝生計算機</a>
+      <a href="/ja/grass-seed-calculator/">種子計算機</a>
+      <a href="/ja/topsoil-calculator/">表土計算機</a>
+      <a href="/ja/mulch-calculator/">マルチ計算機</a>
+      <a href="/ja/when-to-lay-sod/">芝生を敷く時期</a>
+      <a href="/ja/privacy-policy/">プライバシーポリシー</a>
+      <a href="/ja/terms-of-use/">利用規約</a>
+    </div>
+    <p>SodCalc &mdash; 無料の芝生計算機とプロジェクトガイド。すべての内容は情報提供のみを目的としています。</p>
+  </div>
+</footer>
+<script src="/ja/js/core.js"></script>
+<script src="/ja/js/seed-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{
+  "Bahia": {
+    "type": "warm",
+    "seedNew": 10,
+    "seedOverseed": 5,
+    "sodCoverage": 450,
+    "shade": "low",
+    "drought": "high",
+    "traffic": "high",
+    "maintenance": "low",
+    "growthRate": "medium"
+  },
+  "Bermuda": {
+    "type": "warm",
+    "seedNew": 2,
+    "seedOverseed": 1,
+    "sodCoverage": 450,
+    "shade": "low",
+    "drought": "high",
+    "traffic": "high",
+    "maintenance": "medium",
+    "growthRate": "fast"
+  },
+  "Buffalo": {
+    "type": "warm",
+    "seedNew": 3,
+    "seedOverseed": 1.5,
+    "sodCoverage": 450,
+    "shade": "medium",
+    "drought": "high",
+    "traffic": "medium",
+    "maintenance": "low",
+    "growthRate": "slow"
+  },
+  "Centipede": {
+    "type": "warm",
+    "seedNew": 0.5,
+    "seedOverseed": 0.3,
+    "sodCoverage": 450,
+    "shade": "medium",
+    "drought": "medium",
+    "traffic": "low",
+    "maintenance": "low",
+    "growthRate": "slow"
+  },
+  "Fine Fescue": {
+    "type": "cool",
+    "seedNew": 5,
+    "seedOverseed": 2.5,
+    "sodCoverage": 450,
+    "shade": "high",
+    "drought": "medium",
+    "traffic": "low",
+    "maintenance": "low",
+    "growthRate": "medium"
+  },
+  "Kentucky Bluegrass": {
+    "type": "cool",
+    "seedNew": 4,
+    "seedOverseed": 2,
+    "sodCoverage": 450,
+    "shade": "low",
+    "drought": "medium",
+    "traffic": "high",
+    "maintenance": "high",
+    "growthRate": "slow"
+  },
+  "Perennial Ryegrass": {
+    "type": "cool",
+    "seedNew": 10,
+    "seedOverseed": 5,
+    "sodCoverage": 450,
+    "shade": "medium",
+    "drought": "low",
+    "traffic": "high",
+    "maintenance": "medium",
+    "growthRate": "fast"
+  },
+  "St. Augustine": {
+    "type": "warm",
+    "seedNew": 2,
+    "seedOverseed": 1,
+    "sodCoverage": 450,
+    "shade": "high",
+    "drought": "medium",
+    "traffic": "medium",
+    "maintenance": "medium",
+    "growthRate": "fast"
+  },
+  "Tall Fescue": {
+    "type": "cool",
+    "seedNew": 10,
+    "seedOverseed": 5,
+    "sodCoverage": 450,
+    "shade": "medium",
+    "drought": "high",
+    "traffic": "high",
+    "maintenance": "medium",
+    "growthRate": "fast"
+  },
+  "Zoysia": {
+    "type": "warm",
+    "seedNew": 2,
+    "seedOverseed": 1,
+    "sodCoverage": 450,
+    "shade": "medium",
+    "drought": "high",
+    "traffic": "high",
+    "maintenance": "medium",
+    "growthRate": "slow"
+  }
+}

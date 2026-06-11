@@ -1,0 +1,121 @@
+<h1>حاسبة التربة السطحية</h1>
+<p>احسب كمية التربة السطحية التي تحتاجها لمشروع حديقتك. سواء كنت تحضر لتركيب العشب أو تبني أحواض حدائق، احصل على الكمية الدقيقة بالياردة المكعبة أو الأكياس.</p>
+
+<div class="card">
+<form id="topsoil-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-area">المساحة</label>
+      <input type="number" id="topsoil-area" placeholder="مثال 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="topsoil-unit">الوحدة</label>
+      <select id="topsoil-unit">
+        <option value="imperial">قدم مربع (sq ft)</option>
+        <option value="metric">متر مربع (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-depth">العمق (بوصة)</label>
+      <input type="number" id="topsoil-depth" value="4" min="1" max="24" step="0.5" required>
+      <span class="hint">موصى به: 4 بوصات لتحضير العشب</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="topsoil-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">أنت تحتاج</div>
+    <div class="result-value" id="topsoil-cy">--</div>
+    <div class="result-label">ياردة مكعبة</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="topsoil-cf">--</div>
+        <div class="lbl">قدم مكعب</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-bags">--</div>
+        <div class="lbl">كيس (0.75 قدم مكعب)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-sqft">--</div>
+        <div class="lbl">المساحة عند العمق</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>هام:</strong> للمشاريع التي تزيد عن 2 ياردة مكعبة، التوصيل بالجملة من مورد محلي عادة أكثر اقتصادية بكثير من شراء الأكياس الفردية.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">قائمة التدقيق قبل الفرد</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-clear"><label>أزل العشب والأعشاب الضارة والحطام الموجود</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-loosen"><label>فكك التربة الموجودة بعمق 3-4 بوصات</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-level"><label>سَوِّ للتصريف المناسب بعيدًا عن المباني</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">دليل تحضير التربة الكامل &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">قائمة التدقيق بعد الفرد</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-compact"><label>اضغط برفق أو ادك لتثبيت التربة</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-water"><label>اسقِ بوفرة لمساعدة التربة على الاستقرار</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-check"><label>أعد فحص الميلان قبل تركيب العشب أو البذر</label></div>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">حاسبة العشب &rarr;</a>
+    <a class="section-link" href="/grass-seed-calculator/">حاسبة البذور &rarr;</a>
+  </div>
+</div>
+</div>
+
+<h2>ما كمية التربة السطحية التي أحتاجها؟</h2>
+<p>لحساب كمية التربة السطحية التي تحتاجها، اضرب مساحتك (بالقدم المربع) في العمق المطلوب (بالبوصة)، ثم اقسم على 324 للحصول على الياردات المكعبة. الصيغة هي: <strong>الياردات المكعبة = (المساحة بالقدم المربع &times; العمق بالبوصة) &divide; 324</strong>.</p>
+<p>على سبيل المثال، حديقة بمساحة 1,000 قدم مربع بعمق 4 بوصات تتطلب حوالي 12.3 ياردة مكعبة من التربة السطحية.</p>
+
+<h2>ما العمق المناسب للتربة السطحية تحت العشب؟</h2>
+<p>لتركيب العشب، يوصى بعمق <strong>4 بوصات من التربة السطحية عالية الجودة</strong>. هذا يمنح جذور العشب عمقًا كافيًا للتجذير والوصول إلى المغذيات. إذا كانت تربتك الحالية ذات جودة جيدة، قد يكون 2-3 بوصات من التربة السطحية كافية كطبقة تحسين.</p>
+<p>لأحواض الحدائق، 6-12 بوصة مثالية للسماح بنمو جذور عميق للخضروات والزهور.</p>
+<p>عند شراء التربة السطحية، ابحث عن مادة داكنة ومتفتتة برائحة ترابية &mdash; ليست حامضة أو كيميائية. التربة السطحية المنخولة تمت تصفيتها لإزالة الصخور والجذور والحطام، مما يجعلها مثالية لتحضير العشب وأحواض الحدائق. التربة السطحية غير المنخولة أرخص لكنها قد تحتوي على كتل وأحجار تخلق سطحًا غير مستوٍ؛ إنها مناسبة بشكل أفضل لملء المناطق المنخفضة أو مشاريع التسوية الكبيرة حيث ستفرد طبقة سميكة.</p>
+
+<h2>حاسبة التربة &mdash; كم كيسًا يساوي ياردة؟</h2>
+<p>الياردة المكعبة من التربة السطحية تساوي 27 قدمًا مكعبًا. الكيس القياسي من التربة السطحية هو 0.75 قدم مكعب، لذا تحتاج <strong>36 كيسًا ليساوي ياردة مكعبة واحدة</strong>. للمشاريع الأكبر من حوالي 2 ياردة مكعبة، التوصيل بالجملة دائمًا تقريبًا أكثر عملية واقتصادية من شراء الأكياس.</p>
+
+<h2>الأسئلة الشائعة</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">ما كمية التربة السطحية التي أحتاجها لعشب جديد؟</div>
+    <div class="faq-a">لتركيب العشب، تحتاج إلى حوالي 4 بوصات من عمق التربة السطحية. لمساحة 1,000 قدم مربع بعمق 4 بوصات، تحتاج حوالي 12.3 ياردة مكعبة من التربة السطحية.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">ما العمق المناسب للتربة السطحية تحت العشب؟</div>
+    <div class="faq-a">يوصى بعمق 4 بوصات من التربة السطحية عالية الجودة قبل تركيب العشب. هذا يمنح جذور العشب عمقًا كافيًا للتجذير والوصول إلى المغذيات والماء.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">كم كيسًا من التربة السطحية يساوي ياردة مكعبة؟</div>
+    <div class="faq-a">الكيس القياسي من التربة السطحية هو 0.75 قدم مكعب. تحتاج 36 كيسًا ليساوي ياردة مكعبة واحدة (27 قدمًا مكعبًا). للمشاريع الكبيرة، التوصيل بالجملة عادة أكثر اقتصادية من الأكياس.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">هل يمكنني استخدام تربة الحديقة بدلاً من التربة السطحية؟</div>
+    <div class="faq-a">تربة الحديقة عادة مخصبة بالسماد والمواد العضوية، مما يجعلها مناسبة لأحواض الحدائق ولكنها ليست مثالية لتركيب العشب. استخدم التربة السطحية المنخولة لمشاريع العشب لضمان قاعدة مستوية ومتسقة.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>حاسبات ذات صلة</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">حاسبة العشب</a>
+    <a class="section-link" href="/grass-seed-calculator/">حاسبة البذور</a>
+    <a class="section-link" href="/mulch-calculator/">حاسبة النشارة</a>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+<h1>ऊपरी मिट्टी कैलकुलेटर</h1>
+<p>गणना करें कि आपको अपने लॉन प्रोजेक्ट के लिए कितनी ऊपरी मिट्टी चाहिए। चाहे आप सॉड स्थापना की तैयारी कर रहे हों या बगीचे की क्यारियां बना रहे हों, घन गज या बैग में सटीक मात्रा प्राप्त करें।</p>
+
+<div class="card">
+<form id="topsoil-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-area">क्षेत्र</label>
+      <input type="number" id="topsoil-area" placeholder="जैसे 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="topsoil-unit">इकाई</label>
+      <select id="topsoil-unit">
+        <option value="imperial">वर्ग फुट (sq ft)</option>
+        <option value="metric">वर्ग मीटर (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-depth">गहराई (इंच)</label>
+      <input type="number" id="topsoil-depth" value="4" min="1" max="24" step="0.5" required>
+      <span class="hint">अनुशंसित: सॉड तैयारी के लिए 4 इंच</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="topsoil-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">आपको चाहिए</div>
+    <div class="result-value" id="topsoil-cy">--</div>
+    <div class="result-label">घन गज</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="topsoil-cf">--</div>
+        <div class="lbl">घन फुट</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-bags">--</div>
+        <div class="lbl">बैग (0.75 घन फुट)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-sqft">--</div>
+        <div class="lbl">गहराई पर क्षेत्र</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>महत्वपूर्ण:</strong> 2 घन गज से अधिक की परियोजनाओं के लिए, स्थानीय आपूर्तिकर्ता से थोक डिलीवरी आमतौर पर अलग-अलग बैग खरीदने की तुलना में कहीं अधिक किफायती होती है।
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">प्री-स्प्रेडिंग चेकलिस्ट</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-clear"><label>मौजूदा घास, खरपतवार और मलबा हटाएं</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-loosen"><label>मौजूदा मिट्टी को 3-4 इंच गहराई तक ढीला करें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-level"><label>संरचनाओं से दूर उचित जल निकासी के लिए ग्रेडिंग करें</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">पूर्ण मिट्टी तैयारी गाइड &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">पोस्ट-स्प्रेडिंग चेकलिस्ट</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-compact"><label>मिट्टी को बैठाने के लिए हल्का रोल या टैंप करें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-water"><label>मिट्टी को बैठाने में मदद के लिए अच्छी तरह से पानी दें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-check"><label>सॉड बिछाने या बीज लगाने से पहले ग्रेड की पुनः जांच करें</label></div>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">सॉड कैलकुलेटर &rarr;</a>
+    <a class="section-link" href="/grass-seed-calculator/">बीज कैलकुलेटर &rarr;</a>
+  </div>
+</div>
+</div>
+
+<h2>मुझे कितनी ऊपरी मिट्टी चाहिए?</h2>
+<p>यह गणना करने के लिए कि आपको कितनी ऊपरी मिट्टी चाहिए, अपने क्षेत्र (वर्ग फुट में) को अपनी वांछित गहराई (इंच में) से गुणा करें, फिर घन गज प्राप्त करने के लिए 324 से विभाजित करें। सूत्र है: <strong>घन गज = (वर्ग फुट में क्षेत्र &times; इंच में गहराई) &divide; 324</strong>।</p>
+<p>उदाहरण के लिए, 4 इंच गहराई पर 1,000 वर्ग फुट लॉन के लिए लगभग 12.3 घन गज ऊपरी मिट्टी की आवश्यकता होती है।</p>
+
+<h2>सॉड के लिए ऊपरी मिट्टी कितनी गहरी होनी चाहिए?</h2>
+<p>सॉड बिछाने के लिए, <strong>4 इंच गुणवत्ता वाली ऊपरी मिट्टी</strong> की गहराई की सिफारिश की जाती है। इससे सॉड की जड़ों को स्थापित होने और पोषक तत्वों तक पहुंचने के लिए पर्याप्त गहराई मिलती है। यदि आपकी मौजूदा मिट्टी अच्छी गुणवत्ता की है, तो संशोधन परत के रूप में 2-3 इंच ऊपरी मिट्टी पर्याप्त हो सकती है।</p>
+<p>बगीचे की क्यारियों के लिए, सब्जियों और फूलों के लिए गहरी जड़ वृद्धि की अनुमति देने के लिए 6-12 इंच आदर्श है।</p>
+<p>ऊपरी मिट्टी खरीदते समय, गहरे, भुरभुरे पदार्थ की तलाश करें जिसमें मिट्टी जैसी गंध हो &mdash; खट्टी या रासायनिक नहीं। छनी हुई ऊपरी मिट्टी को पत्थरों, जड़ों और मलबे को हटाने के लिए फ़िल्टर किया गया है, जो इसे सॉड तैयारी और बगीचे की क्यारियों के लिए आदर्श बनाता है। बिना छनी ऊपरी मिट्टी सस्ती है लेकिन इसमें ढेले और पत्थर हो सकते हैं जो असमान सतह बनाते हैं; यह निचले स्थानों को भरने या बड़ी ग्रेडिंग परियोजनाओं के लिए बेहतर उपयुक्त है जहां आप एक मोटी परत फैला रहे होंगे।</p>
+
+<h2>मिट्टी कैलकुलेटर &mdash; एक गज में कितने बैग होते हैं?</h2>
+<p>एक घन गज ऊपरी मिट्टी 27 घन फुट के बराबर होती है। ऊपरी मिट्टी का एक मानक बैग 0.75 घन फुट का होता है, इसलिए <strong>एक घन गज के बराबर 36 बैग</strong> चाहिए। लगभग 2 घन गज से बड़ी परियोजनाओं के लिए, थोक डिलीवरी लगभग हमेशा बैग खरीदने से अधिक व्यावहारिक और किफायती होती है।</p>
+
+<h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">नए लॉन के लिए मुझे कितनी ऊपरी मिट्टी चाहिए?</div>
+    <div class="faq-a">सॉड बिछाने के लिए, आपको लगभग 4 इंच ऊपरी मिट्टी की गहराई चाहिए। 4 इंच गहराई पर 1,000 वर्ग फुट के लिए, आपको लगभग 12.3 घन गज ऊपरी मिट्टी की आवश्यकता होगी।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">सॉड के लिए ऊपरी मिट्टी कितनी गहरी होनी चाहिए?</div>
+    <div class="faq-a">सॉड बिछाने से पहले 4 इंच गुणवत्ता वाली ऊपरी मिट्टी की गहराई की सिफारिश की जाती है। इससे सॉड की जड़ों को स्थापित होने और पोषक तत्वों और पानी तक पहुंचने के लिए पर्याप्त गहराई मिलती है।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">एक घन गज बनाने के लिए ऊपरी मिट्टी के कितने बैग चाहिए?</div>
+    <div class="faq-a">ऊपरी मिट्टी का एक मानक बैग 0.75 घन फुट का होता है। एक घन गज (27 घन फुट) के बराबर 36 बैग लगते हैं। बड़ी परियोजनाओं के लिए, थोक डिलीवरी आमतौर पर बैग की तुलना में अधिक किफायती होती है।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">क्या मैं ऊपरी मिट्टी के बजाय बगीचे की मिट्टी का उपयोग कर सकता हूं?</div>
+    <div class="faq-a">बगीचे की मिट्टी आमतौर पर खाद और कार्बनिक पदार्थ से समृद्ध होती है, जो इसे बगीचे की क्यारियों के लिए उपयुक्त बनाती है लेकिन सॉड स्थापना के लिए आदर्श नहीं है। एक समतल, सुसंगत आधार सुनिश्चित करने के लिए सॉड परियोजनाओं के लिए छनी हुई ऊपरी मिट्टी का उपयोग करें।</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>संबंधित कैलकुलेटर</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">सॉड कैलकुलेटर</a>
+    <a class="section-link" href="/grass-seed-calculator/">बीज कैलकुलेटर</a>
+    <a class="section-link" href="/mulch-calculator/">मल्च कैलकुलेटर</a>
+  </div>
+</div>

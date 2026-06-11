@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sodcalc.com/hi/sitemap.xml

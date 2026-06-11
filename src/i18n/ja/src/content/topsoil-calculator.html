@@ -1,0 +1,121 @@
+<h1>表土計算機</h1>
+<p>芝生プロジェクトに必要な表土の量を計算します。芝生の設置準備でも花壇の増築でも、立方ヤードまたは袋数で正確な量を把握できます。</p>
+
+<div class="card">
+<form id="topsoil-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-area">面積</label>
+      <input type="number" id="topsoil-area" placeholder="例: 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="topsoil-unit">単位</label>
+      <select id="topsoil-unit">
+        <option value="imperial">平方フィート (sq ft)</option>
+        <option value="metric">平方メートル (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-depth">深さ (インチ)</label>
+      <input type="number" id="topsoil-depth" value="4" min="1" max="24" step="0.5" required>
+      <span class="hint">推奨：芝生の準備には4インチ</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="topsoil-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">必要量</div>
+    <div class="result-value" id="topsoil-cy">--</div>
+    <div class="result-label">立方ヤード</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="topsoil-cf">--</div>
+        <div class="lbl">立方フィート</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-bags">--</div>
+        <div class="lbl">袋 (0.75立方フィート)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-sqft">--</div>
+        <div class="lbl">指定深さでの面積</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>重要:</strong> 2立方ヤードを超えるプロジェクトでは、個別の袋を購入するよりも、地元のサプライヤーからのバルク配送の方がはるかに費用対効果が高いです。
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">敷設前チェックリスト</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-clear"><label>既存の草、雑草、ゴミを取り除く</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-loosen"><label>既存の土壌を3〜4インチの深さまでほぐす</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-level"><label>建物から離れる適切な排水勾配を整地する</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">完全な土壌準備ガイド &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">敷設後チェックリスト</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-compact"><label>軽くローラーまたはタンパーで土を落ち着かせる</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-water"><label>土が落ち着くよう十分に水をやる</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-check"><label>芝生を敷く前または種をまく前に勾配を再確認する</label></div>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">芝生計算機 &rarr;</a>
+    <a class="section-link" href="/grass-seed-calculator/">種子計算機 &rarr;</a>
+  </div>
+</div>
+</div>
+
+<h2>必要な表土の量は？</h2>
+<p>必要な表土の量を計算するには、面積（平方フィート）に希望の深さ（インチ）を掛け、324で割って立方ヤードを求めます。計算式は：<strong>立方ヤード = (面積（平方フィート）&times; 深さ（インチ）) &divide; 324</strong>。</p>
+<p>例えば、1,000平方フィートの芝生で深さ4インチの場合、約12.3立方ヤードの表土が必要です。</p>
+
+<h2>芝生用の表土の深さは？</h2>
+<p>芝生を敷くには、<strong>4インチの良質な表土</strong>の深さが推奨されます。これにより、芝生の根が定着し栄養分にアクセスするのに十分な深さが確保されます。既存の土壌が良質な場合は、改良層として2〜3インチの表土で十分な場合もあります。</p>
+<p>花壇の場合は、野菜や花の深い根の成長を可能にするために6〜12インチが理想的です。</p>
+<p>表土を購入する際は、酸っぱい匂いや化学的な匂いではなく、土の香りがする暗くて砕けやすい材料を探してください。ふるいにかけた表土は石、根、ゴミが除去されており、芝生の準備や花壇に最適です。ふるいにかけていない表土は安価ですが、塊や石が含まれている可能性があり、表面が不均一になります。低い場所を埋めたり、厚い層を敷く大規模な整地プロジェクトにより適しています。</p>
+
+<h2>土壌計算機 &mdash; 1ヤードは何袋？</h2>
+<p>1立方ヤードの表土は27立方フィートに相当します。標準的な表土の袋は0.75立方フィートなので、<strong>1立方ヤードにするには36袋</strong>必要です。約2立方ヤードを超えるプロジェクトでは、袋を購入するよりもバルク配送の方がほぼ常に実用的で費用対効果が高いです。</p>
+
+<h2>よくある質問</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">新しい芝生に必要な表土の量は？</div>
+    <div class="faq-a">芝生を敷くには、約4インチの表土の深さが必要です。1,000平方フィートで深さ4インチの場合、約12.3立方ヤードの表土が必要です。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">芝生用の表土の深さはどのくらい必要ですか？</div>
+    <div class="faq-a">芝生を敷く前に、4インチの良質な表土を敷くことをお勧めします。これにより、芝生の根が定着し、栄養分と水分にアクセスするのに十分な深さが確保されます。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">表土1立方ヤードは何袋分ですか？</div>
+    <div class="faq-a">標準的な表土の袋は0.75立方フィートです。1立方ヤード（27立方フィート）にするには36袋必要です。大規模なプロジェクトでは、通常、袋よりバルク配送の方が費用対効果が高いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">表土の代わりに園芸用土を使ってもいいですか？</div>
+    <div class="faq-a">園芸用土は通常堆肥や有機物が豊富に含まれており、花壇には適していますが、芝生の設置には理想的ではありません。水平で一貫した下地を確保するために、芝生プロジェクトにはふるいにかけた表土を使用してください。</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>関連計算機</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">芝生計算機</a>
+    <a class="section-link" href="/grass-seed-calculator/">種子計算機</a>
+    <a class="section-link" href="/mulch-calculator/">マルチ計算機</a>
+  </div>
+</div>

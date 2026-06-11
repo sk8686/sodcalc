@@ -1,0 +1,154 @@
+<h1>Calculadora de Césped</h1>
+<p>Calcule exactamente cuánto césped necesita. Ingrese el área de su césped, seleccione su tipo de pasto y obtenga sus resultados en rollos y palés &mdash; con una lista de verificación previa a la instalación incorporada.</p>
+
+<div class="card">
+<form id="sod-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-area">Área del Césped</label>
+      <input type="number" id="sod-area" placeholder="ej. 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="sod-unit">Unidad</label>
+      <select id="sod-unit">
+        <option value="imperial">Pies Cuadrados (pies²)</option>
+        <option value="metric">Metros Cuadrados (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-type">Tipo de Pasto</label>
+      <select id="sod-type">
+        <option value="">Seleccionar tipo de pasto</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Zoysia">Zoysia</option>
+        <option value="St. Augustine">St. Augustine</option>
+        <option value="Kentucky Bluegrass">Kentucky Bluegrass</option>
+        <option value="Tall Fescue">Tall Fescue</option>
+        <option value="Centipede">Centipede</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Perennial Ryegrass">Perennial Ryegrass</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="custom-roll">Tamaño del Rollo (pies²)</label>
+      <input type="number" id="custom-roll" placeholder="10" min="1" step="any">
+      <span class="hint">Rollo estándar = 10 pies²</span>
+    </div>
+  </div>
+</form>
+
+<div id="sod-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">Necesita</div>
+    <div class="result-value" id="sod-rolls">--</div>
+    <div class="result-label">rollos estándar</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="sod-pallets">--</div>
+        <div class="lbl">palés</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-waste">--</div>
+        <div class="lbl">con 5% de desperdicio</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-sqft">--</div>
+        <div class="lbl">área total</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Importante:</strong> El césped es un producto vivo. Debe instalarse dentro de las 24-48 horas posteriores a la entrega. Pida solo cuando esté listo para instalar.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Lista de Verificación Previa a la Instalación</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-ph"><label>Probar el pH del suelo</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-kill"><label>Eliminar el pasto y las malas hierbas existentes</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-level"><label>Nivelar el suelo y asegurar un drenaje adecuado</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-moisten"><label>Humedecer ligeramente la superficie del suelo antes de instalar</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-schedule"><label>Programar la entrega del césped para el día de instalación</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">Guía completa de preparación &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Cuidado Post-Instalación</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-water"><label>Regar abundantemente todos los días durante las primeras 2 semanas</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-traffic"><label>Evitar el tránsito peatonal durante al menos 2 semanas</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-mow"><label>Esperar hasta que el césped alcance 3-4 pulgadas antes del primer corte</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-fertilize"><label>Aplicar fertilizante inicial después de 4-6 semanas</label></div>
+      <a class="checklist-link" href="/new-sod-care/">Guía completa de cuidado &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links mt-2">
+    <a class="section-link" href="/how-to-lay-sod/">&#8594; ¿Ya tiene sus números? Aquí le mostramos cómo instalar césped</a>
+    <a class="section-link" href="/topsoil-calculator/">&#8594; Calcule cuánta tierra vegetal necesitará</a>
+    <a class="section-link" href="/sod-vs-seed/">&#8594; ¿No está seguro de que el césped sea adecuado para usted? Compare césped vs semilla</a>
+  </div>
+</div>
+</div>
+
+<h2>¿Cuánto Césped Necesito?</h2>
+<p>Para calcular cuánto césped necesita, mida el largo y el ancho de su área de césped en pies y multiplíquelos para obtener los pies cuadrados. Si su césped tiene una forma irregular, divídalo en rectángulos más pequeños, calcule cada uno y súmelos.</p>
+<p>Una vez que tenga el total de pies cuadrados, divídalo por el tamaño de un rollo de césped estándar (generalmente 10 pies²) para obtener el número de rollos. Agregue un 5-10% extra para tener en cuenta los cortes alrededor de bordes, curvas y cualquier pieza que pueda dañarse durante el transporte.</p>
+<p>La mayoría del césped se vende por palé, y cada palé contiene aproximadamente 450-500 pies cuadrados (50 rollos estándar). Para proyectos grandes, pedir por palé es más conveniente y a menudo más rentable que pedir rollos individuales.</p>
+<p>Para céspedes de forma irregular, el método más fácil es dibujar su jardín en papel cuadriculado, dividirlo en rectángulos y sumar las áreas individuales. Para bordes curvos, trate la curva como una línea recta que promedia la forma &mdash; cortará la curva real durante la instalación y el exceso de la sobreestimación se convierte en su margen de desperdicio.</p>
+<p>Si tiene una pendiente o colina, mida la huella plana (largo × ancho), no el área de la superficie inclinada. El césped puede estirarse ligeramente y la diferencia de longitud de la pendiente suele ser lo suficientemente pequeña como para que el 5% de desperdicio la cubra.</p>
+
+<h2>Calculadora de Turf</h2>
+<p>Ya sea que lo llame césped o turf, el cálculo es el mismo. En Estados Unidos y Canadá, el término "sod" es más común, mientras que "turf" se usa ampliamente en el Reino Unido, Australia y Nueva Zelanda. Esta calculadora funciona para ambos &mdash; simplemente ingrese su área y obtenga sus resultados en rollos o palés.</p>
+
+<h2>¿Cuánto Césped Hay en un Palé?</h2>
+<p>Un palé estándar de césped contiene <strong>450 a 500 pies cuadrados</strong> de cobertura. Esto generalmente se desglosa en:</p>
+<div class="card"><table class="data-table">
+  <tr><th>Formato</th><th>Cobertura</th><th>Por Palé</th></tr>
+  <tr><td>Rollo</td><td>10 pies²</td><td>50 rollos</td></tr>
+  <tr><td>Losa</td><td>2.67 pies²</td><td>100 losas</td></tr>
+  <tr><td>Rollo Grande</td><td>15 pies²</td><td>30 rollos</td></tr>
+</table></div>
+<p>Los tamaños del césped pueden variar según la granja y la región. Si su proveedor utiliza tamaños no estándar, use la opción de tamaño de rollo personalizado en la calculadora de arriba.</p>
+
+<h2>Tamaños de Rollos de Césped</h2>
+<p>Los rollos de césped estándar generalmente miden 2 pies de ancho por 5 pies de largo, cubriendo 10 pies cuadrados cada uno. Las losas suelen ser de 16 pulgadas por 24 pulgadas, cubriendo aproximadamente 2.67 pies cuadrados. Los rollos grandes pueden cubrir 15 pies cuadrados o más. Siempre confirme el tamaño exacto con su proveedor antes de calcular.</p>
+
+<h2>Preguntas Frecuentes</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">¿Cuántos palés de césped necesito para 1,000 pies²?</div>
+    <div class="faq-a">Para 1,000 pies cuadrados, necesita aproximadamente 2 palés de césped (asumiendo 500 pies² por palé). Con un 5% extra para desperdicio y cortes, pida 2.1 palés.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Cuánto césped extra debo pedir?</div>
+    <div class="faq-a">Pida un 5-10% extra de césped para tener en cuenta los cortes alrededor de bordes, curvas y cualquier pieza dañada. Es mejor tener algunos rollos de más que quedarse corto.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Puedo instalar césped sobre pasto existente?</div>
+    <div class="faq-a">No. Debe eliminar el pasto y la vegetación existentes antes de instalar césped nuevo. Las raíces del césped necesitan contacto directo con el suelo desnudo para establecerse. Instalar césped sobre pasto viejo impedirá el enraizamiento y hará que el nuevo césped muera.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Cuánto tarda el césped en enraizar?</div>
+    <div class="faq-a">El césped generalmente comienza a enraizar entre 10 y 14 días con un riego adecuado. El establecimiento completo de las raíces toma de 4 a 6 semanas. Durante este período, evite el tráfico pesado y mantenga el suelo consistentemente húmedo.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Es lo mismo turf que césped?</div>
+    <div class="faq-a">Sí, turf y césped se refieren a lo mismo: pasto pre-cultivado que viene en rollos o losas. "Sod" es el término más común en Estados Unidos, mientras que "turf" se usa ampliamente en el Reino Unido, Australia y otros países de habla inglesa.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Calculadoras Relacionadas</h2>
+  <div class="section-links">
+    <a class="section-link" href="/grass-seed-calculator/">Calculadora de Semillas de Pasto</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculadora de Tierra Vegetal</a>
+    <a class="section-link" href="/mulch-calculator/">Calculadora de Mantillo</a>
+  </div>
+</div>

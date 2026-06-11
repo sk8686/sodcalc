@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grass Seed Calculator - How Much Grass Seed Do I Need?</title>
+<meta name="description" content="Calculate how much grass seed you need by grass type. Covers new lawns and overseeding. Free calculator with seeding checklist and tips.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sodcalc.com/grass-seed-calculator/">
+<meta property="og:title" content="Grass Seed Calculator - How Much Grass Seed Do I Need?">
+<meta property="og:description" content="Calculate how much grass seed you need by grass type. Covers new lawns and overseeding. Free calculator with seeding checklist and tips.">
+<meta property="og:url" content="https://sodcalc.com/grass-seed-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SodCalc">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://sodcalc.com/grass-seed-calculator/">
+<link rel="alternate" hreflang="zh-CN" href="https://sodcalc.com/zh/grass-seed-calculator/">
+<link rel="alternate" hreflang="es" href="https://sodcalc.com/es/grass-seed-calculator/">
+<link rel="alternate" hreflang="hi" href="https://sodcalc.com/hi/grass-seed-calculator/">
+<link rel="alternate" hreflang="ar" href="https://sodcalc.com/ar/grass-seed-calculator/">
+<link rel="alternate" hreflang="pt" href="https://sodcalc.com/pt/grass-seed-calculator/">
+<link rel="alternate" hreflang="fr" href="https://sodcalc.com/fr/grass-seed-calculator/">
+<link rel="alternate" hreflang="ja" href="https://sodcalc.com/ja/grass-seed-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://sodcalc.com/grass-seed-calculator/">
+<link rel="stylesheet" href="{{langPathPrefix}}/css/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much grass seed do I need for 1,000 sq ft?","acceptedAnswer":{"@type":"Answer","text":"It depends on the grass type. Kentucky Bluegrass requires about 4 lbs per 1,000 sq ft for a new lawn, while Tall Fescue requires about 10 lbs. Use the calculator for your exact amount."}},{"@type":"Question","name":"What is the difference between new lawn and overseeding rates?","acceptedAnswer":{"@type":"Answer","text":"New lawn seeding uses a higher rate to ensure full coverage on bare soil. Overseeding uses roughly half the rate since you are filling in thin spots within an existing lawn."}},{"@type":"Question","name":"Can I mix different types of grass seed?","acceptedAnswer":{"@type":"Answer","text":"Yes, many commercial seed mixes combine complementary grass types. Kentucky Bluegrass mixed with Perennial Ryegrass provides quick germination and long-term durability."}},{"@type":"Question","name":"When is the best time to plant grass seed?","acceptedAnswer":{"@type":"Answer","text":"Plant cool-season grasses in early fall. Plant warm-season grasses in late spring to early summer."}}]}</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="{{langPathPrefix}}/" class="nav-logo">SodCalc</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <div class="nav-menu">
+      <a href="{{langPathPrefix}}/sod-calculator/">Sod Calculator</a>
+      <a href="{{langPathPrefix}}/grass-seed-calculator/">Seed Calculator</a>
+      <a href="{{langPathPrefix}}/sod-vs-seed/">Sod vs Seed</a>
+      <a href="{{langPathPrefix}}/grass-types/">Grass Types</a>
+      <a href="{{langPathPrefix}}/how-to-lay-sod/">How to Lay Sod</a>
+      <a href="{{langPathPrefix}}/common-sod-mistakes/">Common Mistakes</a>
+    </div>
+    <div class="lang-select">
+      <button class="lang-btn" aria-label="Select language" aria-expanded="false">EN</button>
+      <div class="lang-dropdown">
+        <a href="/zh/">中文</a>
+        <a href="/es/">Español</a>
+        <a href="/hi/">हिन्दी</a>
+        <a href="/ar/">العربية</a>
+        <a href="/pt/">Português</a>
+        <a href="/fr/">Français</a>
+        <a href="/ja/">日本語</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="container" id="main-content"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-current="page"> &rsaquo; Grass Seed Calculator</span></nav><!-- content --><h1>Grass Seed Calculator</h1>
+<p>Calculate how much grass seed you need by grass type. Covers new lawns and overseeding with accurate coverage rates for every major grass variety.</p>
+
+<div class="card">
+<form id="seed-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-area">Lawn Area</label>
+      <input type="number" id="seed-area" placeholder="e.g. 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="seed-unit">Unit</label>
+      <select id="seed-unit">
+        <option value="imperial">Square Feet (sq ft)</option>
+        <option value="metric">Square Meters (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-type">Grass Type</label>
+      <select id="seed-type">
+        <option value="">Select grass type</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Centipede">Centipede</option>
+        <option value="Fine Fescue">Fine Fescue</option>
+        <option value="Kentucky Bluegrass">Kentucky Bluegrass</option>
+        <option value="Perennial Ryegrass">Perennial Ryegrass</option>
+        <option value="Tall Fescue">Tall Fescue</option>
+        <option value="Zoysia">Zoysia</option>
+        <option value="Sun & Shade Mix">Sun &amp; Shade Mix</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="seed-purpose">Purpose</label>
+      <select id="seed-purpose">
+        <option value="new">New Lawn</option>
+        <option value="overseed">Overseeding (existing lawn)</option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div id="seed-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">You Need</div>
+    <div class="result-value" id="seed-total">--</div>
+    <div class="result-label">total seed</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="seed-bags">--</div>
+        <div class="lbl">standard 5 lb bags</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-rate">--</div>
+        <div class="lbl">coverage rate</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-sqft">--</div>
+        <div class="lbl">total area</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Important:</strong> Different grass types have very different seeding rates. Bermuda needs only 2 lbs per 1,000 sq ft while Tall Fescue needs 10 lbs. Selecting the wrong rate is the most common mistake in seeding projects.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Pre-Seeding Checklist</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-ph"><label>Test soil pH (ideal range: 6.0-7.0)</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-kill"><label>Remove existing grass and weeds</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-loosen"><label>Loosen top 1-2 inches of soil</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-rake"><label>Lightly rake after spreading seed to cover</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Complete seeding guide &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Post-Seeding Care</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-moist"><label>Keep soil consistently moist until germination</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-traffic"><label>Avoid foot traffic until seedlings are established</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-mow"><label>First mow when grass reaches 3-4 inches</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Complete care guide &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/how-to-plant-grass-seed/">Planting seed? Read the step-by-step guide</a>
+    <a class="section-link" href="/topsoil-calculator/">Topsoil Calculator &rarr;</a>
+    <a class="section-link" href="/sod-calculator/">Sod Calculator</a>
+  </div>
+</div>
+</div>
+
+<h2>How Much Grass Seed Do I Need?</h2>
+<p>The amount of grass seed you need depends on three factors: the size of your lawn, the type of grass you are planting, and whether you are seeding a new lawn or overseeding an existing one. Different grass types have dramatically different seeding rates. For example, Kentucky Bluegrass requires only 4 lbs per 1,000 square feet for a new lawn, while Tall Fescue requires 10 lbs per 1,000 square feet.</p>
+<p>For new lawns, use the higher "new lawn" rate to ensure full coverage on bare soil. For overseeding an existing lawn, use the lower rate since you are filling in thin spots rather than starting from bare soil.</p>
+
+<h2>Grass Seed Coverage Rates</h2>
+<p>Coverage rates vary significantly by grass type:</p>
+<div class="card"><table class="data-table">
+  <tr><th>Grass Type</th><th>New Lawn (lbs/1,000 sq ft)</th><th>Overseeding (lbs/1,000 sq ft)</th></tr>
+  <tr><td>Bermuda</td><td>2</td><td>1</td></tr>
+  <tr><td>Centipede</td><td>0.5</td><td>0.3</td></tr>
+  <tr><td>Fine Fescue</td><td>5</td><td>2.5</td></tr>
+  <tr><td>Kentucky Bluegrass</td><td>4</td><td>2</td></tr>
+  <tr><td>Perennial Ryegrass</td><td>10</td><td>5</td></tr>
+  <tr><td>Tall Fescue</td><td>10</td><td>5</td></tr>
+  <tr><td>Bahia</td><td>10</td><td>5</td></tr>
+  <tr><td>Zoysia</td><td>2</td><td>1</td></tr>
+  <tr><td>Sun &amp; Shade Mix</td><td>6</td><td>3</td></tr>
+</table></div>
+
+<h2>Tips for Buying Grass Seed</h2>
+<ul>
+  <li><strong>Check the label</strong> for the germination rate and weed seed percentage. Quality seed should have a germination rate above 85% and weed seed content below 0.5%.</li>
+  <li><strong>Buy from a local source</strong> when possible. Local suppliers stock varieties adapted to your regional climate.</li>
+  <li><strong>Match the grass to your conditions.</strong> If your yard has shade, choose a shade-tolerant variety like Fine Fescue. For full sun, Bermuda or Zoysia perform best.</li>
+  <li><strong>Store unused seed properly.</strong> Grass seed loses about 10-20% viability per year under normal storage conditions. Keep leftover seed in a cool, dry place in a sealed container. Use within one year for best results.</li>
+</ul>
+
+<h2>Why Does Seed Type Change How Much I Need?</h2>
+<p>Different grass species have dramatically different seed sizes. Kentucky Bluegrass seeds are tiny (about 2 million seeds per pound), so you only need 4 lbs to cover 1,000 sq ft. Tall Fescue seeds are much larger (about 230,000 seeds per pound), requiring 10 lbs for the same area. The calculator accounts for these differences automatically when you select your grass type.</p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">How much grass seed do I need for 1,000 sq ft?</div>
+    <div class="faq-a">It depends on the grass type. Kentucky Bluegrass requires about 4 lbs per 1,000 sq ft for a new lawn, while Tall Fescue requires about 10 lbs. Use the calculator above to get the exact amount for your grass type.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is the difference between new lawn and overseeding rates?</div>
+    <div class="faq-a">New lawn seeding uses a higher rate to ensure full coverage on bare soil. Overseeding uses roughly half the rate since you are filling in thin spots within an existing lawn.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I mix different types of grass seed?</div>
+    <div class="faq-a">Yes, many commercial seed mixes combine complementary grass types. For example, Kentucky Bluegrass mixed with Perennial Ryegrass provides quick germination from the ryegrass and long-term durability from the bluegrass.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">When is the best time to plant grass seed?</div>
+    <div class="faq-a">Plant cool-season grasses (Fescue, Bluegrass, Ryegrass) in early fall when soil temperatures are still warm but air temperatures are cooling. Plant warm-season grasses (Bermuda, Zoysia, Centipede) in late spring to early summer.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Related Calculators</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Sod Calculator</a>
+    <a class="section-link" href="/topsoil-calculator/">Topsoil Calculator</a>
+    <a class="section-link" href="/mulch-calculator/">Mulch Calculator</a>
+  </div>
+</div><!-- /content -->
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="{{langPathPrefix}}/">Home</a>
+      <a href="{{langPathPrefix}}/sod-calculator/">Sod Calculator</a>
+      <a href="{{langPathPrefix}}/grass-seed-calculator/">Seed Calculator</a>
+      <a href="{{langPathPrefix}}/topsoil-calculator/">Topsoil Calculator</a>
+      <a href="{{langPathPrefix}}/mulch-calculator/">Mulch Calculator</a>
+      <a href="{{langPathPrefix}}/when-to-lay-sod/">When to Lay Sod</a>
+      <a href="{{langPathPrefix}}/privacy-policy/">Privacy Policy</a>
+      <a href="{{langPathPrefix}}/terms-of-use/">Terms of Use</a>
+    </div>
+    <p>SodCalc &mdash; Free lawn calculators and project guides. All content is for informational purposes only.</p>
+  </div>
+</footer>
+<script src="{{langPathPrefix}}/js/core.js"></script>
+<script src="/js/seed-calculator.js"></script>
+</body>
+</html>

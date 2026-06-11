@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mulch Calculator - How Much Mulch Do I Need?</title>
+<meta name="description" content="Calculate how much mulch you need in cubic yards or bags. Free mulch calculator for garden beds, tree rings, and landscaping projects.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sodcalc.com/mulch-calculator/">
+<meta property="og:title" content="Mulch Calculator - How Much Mulch Do I Need?">
+<meta property="og:description" content="Calculate how much mulch you need in cubic yards or bags. Free mulch calculator for garden beds, tree rings, and landscaping projects.">
+<meta property="og:url" content="https://sodcalc.com/mulch-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SodCalc">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://sodcalc.com/mulch-calculator/">
+<link rel="alternate" hreflang="zh-CN" href="https://sodcalc.com/zh/mulch-calculator/">
+<link rel="alternate" hreflang="es" href="https://sodcalc.com/es/mulch-calculator/">
+<link rel="alternate" hreflang="hi" href="https://sodcalc.com/hi/mulch-calculator/">
+<link rel="alternate" hreflang="ar" href="https://sodcalc.com/ar/mulch-calculator/">
+<link rel="alternate" hreflang="pt" href="https://sodcalc.com/pt/mulch-calculator/">
+<link rel="alternate" hreflang="fr" href="https://sodcalc.com/fr/mulch-calculator/">
+<link rel="alternate" hreflang="ja" href="https://sodcalc.com/ja/mulch-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://sodcalc.com/mulch-calculator/">
+<link rel="stylesheet" href="/css/styles.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much mulch do I need for 1,000 sq ft?","acceptedAnswer":{"@type":"Answer","text":"For 1,000 square feet at 3 inches deep, you need approximately 9.3 cubic yards of mulch, or about 125 bags (2 cu ft each)."}},{"@type":"Question","name":"What is the ideal mulch depth?","acceptedAnswer":{"@type":"Answer","text":"Apply mulch at a depth of 3-4 inches for new applications. Maintain existing mulch at 3-4 inches by topping up annually. Avoid piling mulch against tree trunks."}},{"@type":"Question","name":"How many bags of mulch equal a cubic yard?","acceptedAnswer":{"@type":"Answer","text":"A standard bag of mulch is 2 cubic feet. It takes 13.5 bags to equal one cubic yard. For projects larger than 5 cubic yards, bulk delivery is more cost effective."}},{"@type":"Question","name":"Should I remove old mulch before adding new?","acceptedAnswer":{"@type":"Answer","text":"You do not need to remove old mulch unless it has formed a matted layer preventing water penetration. Simply fluff the old mulch and add new on top."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sodcalc.com/"},{"@type":"ListItem","position":2,"name":"Mulch Calculator","item":"https://sodcalc.com/mulch-calculator/"}]}]</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">SodCalc</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <div class="nav-menu">
+      <a href="/sod-calculator/">Sod Calculator</a>
+      <a href="/grass-seed-calculator/">Seed Calculator</a>
+      <a href="/sod-vs-seed/">Sod vs Seed</a>
+      <a href="/grass-types/">Grass Types</a>
+      <a href="/how-to-lay-sod/">How to Lay Sod</a>
+      <a href="/common-sod-mistakes/">Common Mistakes</a>
+    </div>
+    <div class="lang-select">
+      <button class="lang-btn" aria-label="Select language" aria-expanded="false">EN</button>
+      <div class="lang-dropdown">
+        <a href="/zh/">中文</a>
+        <a href="/es/">Español</a>
+        <a href="/hi/">हिन्दी</a>
+        <a href="/ar/">العربية</a>
+        <a href="/pt/">Português</a>
+        <a href="/fr/">Français</a>
+        <a href="/ja/">日本語</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="container" id="main-content"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-current="page"> &rsaquo; Mulch Calculator</span></nav><!-- content --><h1>Mulch Calculator</h1>
+<p>Calculate how much mulch you need for garden beds, tree rings, and landscaping projects. Get the exact amount in cubic yards or bags.</p>
+
+<div class="card">
+<form id="mulch-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-area">Area</label>
+      <input type="number" id="mulch-area" placeholder="e.g. 500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="mulch-unit">Unit</label>
+      <select id="mulch-unit">
+        <option value="imperial">Square Feet (sq ft)</option>
+        <option value="metric">Square Meters (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-depth">Depth (inches)</label>
+      <input type="number" id="mulch-depth" value="3" min="1" max="12" step="0.5" required>
+      <span class="hint">Recommended: 3-4 inches</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="mulch-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">You Need</div>
+    <div class="result-value" id="mulch-cy">--</div>
+    <div class="result-label">cubic yards</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="mulch-bags">--</div>
+        <div class="lbl">bags (2 cu ft)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="mulch-sqft">--</div>
+        <div class="lbl">area at depth</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Important:</strong> Keep mulch 2-3 inches away from tree trunks and plant stems. Piling mulch against trunks (often called "volcano mulching") traps moisture and can cause rot and disease.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Pre-Mulching Checklist</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-weed"><label>Remove existing weeds from the area</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-moisten"><label>Water the soil before applying mulch</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-depth"><label>Check existing mulch depth &mdash; remove excess if over 4 inches</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Annual Mulch Maintenance</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-check"><label>Check mulch depth annually &mdash; replenish to 3-4 inches</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-fluff"><label>Fluff compacted mulch before adding new material</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-wood"><label>Consider fresh wood chips for paths and play areas</label></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>How Much Mulch Do I Need?</h2>
+<p>To calculate how much mulch you need, use the formula: <strong>Cubic Yards = (Area in sq ft &times; Depth in inches) &divide; 324</strong>. For a typical garden bed of 500 square feet at 3 inches deep, you will need approximately 4.6 cubic yards of mulch, or about 62 bags (2 cubic feet each).</p>
+
+<h2>What Is the Ideal Mulch Depth?</h2>
+<p>Apply mulch at a depth of <strong>3 to 4 inches</strong> for new applications. This depth suppresses weeds effectively while still allowing water to penetrate. For existing mulch, maintain the 3-4 inch depth by topping up annually as the organic material decomposes. Avoid letting mulch depth exceed 4 inches, as this can restrict oxygen to plant roots.</p>
+<p>When choosing mulch, consider your goals: organic mulches like wood chips and shredded bark break down over time, improving soil structure and adding nutrients. Inorganic mulches like stone or rubber last indefinitely but do nothing for soil health — they are better suited for permanent pathways or decorative areas where you do not want annual replenishment.</p>
+<p>As a rule of thumb, 2-3 inches is sufficient for most flower beds and ornamental plantings. Use 3-4 inches when weed suppression is a top priority, such as around trees or along fence lines. Never exceed 4 inches of mulch depth — too much mulch can suffocate plant roots by restricting oxygen exchange and can create a habitat for rodents and pests.</p>
+
+<h2>Mulch Coverage &mdash; Bags vs Bulk</h2>
+<p>A standard bag of mulch covers approximately 12 square feet at 2 inches deep, or 8 square feet at 3 inches deep. A cubic yard of mulch (27 cubic feet) covers approximately 108 square feet at 3 inches deep. For projects requiring more than 5 cubic yards, bulk delivery is typically more practical and cost-effective than purchasing individual bags.</p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">How much mulch do I need for 1,000 sq ft?</div>
+    <div class="faq-a">For 1,000 square feet at 3 inches deep, you need approximately 9.3 cubic yards of mulch, or about 125 bags (2 cu ft each).</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is the ideal mulch depth?</div>
+    <div class="faq-a">Apply mulch at a depth of 3-4 inches for new applications. Maintain existing mulch at 3-4 inches by topping up annually as it decomposes. Avoid piling mulch against tree trunks.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How many bags of mulch equal a cubic yard?</div>
+    <div class="faq-a">A standard bag of mulch is 2 cubic feet. It takes 13.5 bags to equal one cubic yard (27 cubic feet). For projects larger than 5 cubic yards, bulk delivery is typically more cost effective.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Should I remove old mulch before adding new?</div>
+    <div class="faq-a">You do not need to remove old mulch unless it has formed a matted layer that prevents water penetration, or if there are signs of fungal growth or pest issues. In most cases, simply fluff the old mulch and add new on top.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Related Calculators</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Sod Calculator</a>
+    <a class="section-link" href="/grass-seed-calculator/">Seed Calculator</a>
+    <a class="section-link" href="/topsoil-calculator/">Topsoil Calculator</a>
+  </div>
+</div><!-- /content -->
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/sod-calculator/">Sod Calculator</a>
+      <a href="/grass-seed-calculator/">Seed Calculator</a>
+      <a href="/topsoil-calculator/">Topsoil Calculator</a>
+      <a href="/mulch-calculator/">Mulch Calculator</a>
+      <a href="/when-to-lay-sod/">When to Lay Sod</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms-of-use/">Terms of Use</a>
+    </div>
+    <p>SodCalc &mdash; Free lawn calculators and project guides. All content is for informational purposes only.</p>
+  </div>
+</footer>
+<script src="/js/core.js"></script>
+<script src="/js/mulch-calc.js"></script>
+</body>
+</html>

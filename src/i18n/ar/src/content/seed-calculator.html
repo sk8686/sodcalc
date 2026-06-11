@@ -1,0 +1,158 @@
+<h1>حاسبة بذور العشب</h1>
+<p>احسب كمية بذور العشب التي تحتاجها حسب نوع العشب. تغطي العشب الجديد وإعادة البذر مع معدلات تغطية دقيقة لكل نوع رئيسي من العشب.</p>
+
+<div class="card">
+<form id="seed-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-area">مساحة الحديقة</label>
+      <input type="number" id="seed-area" placeholder="مثال 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="seed-unit">الوحدة</label>
+      <select id="seed-unit">
+        <option value="imperial">قدم مربع (sq ft)</option>
+        <option value="metric">متر مربع (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-type">نوع العشب</label>
+      <select id="seed-type">
+        <option value="">اختر نوع العشب</option>
+        <option value="Bahia">باهيا</option>
+        <option value="Bermuda">برمودا</option>
+        <option value="Centipede">سينتيبيد</option>
+        <option value="Fine Fescue">فاين فيسكيو</option>
+        <option value="Kentucky Bluegrass">كنتاكي بلوغراس</option>
+        <option value="Perennial Ryegrass">راي غراس معمر</option>
+        <option value="Tall Fescue">تال فيسكيو</option>
+        <option value="Zoysia">زويسيا</option>
+        <option value="Sun & Shade Mix">مزيج شمس و ظل</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="seed-purpose">الغرض</label>
+      <select id="seed-purpose">
+        <option value="new">عشب جديد</option>
+        <option value="overseed">إعادة بذر (عشب موجود)</option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div id="seed-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">أنت تحتاج</div>
+    <div class="result-value" id="seed-total">--</div>
+    <div class="result-label">إجمالي البذور</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="seed-bags">--</div>
+        <div class="lbl">كيس قياسي 5 أرطال</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-rate">--</div>
+        <div class="lbl">معدل التغطية</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-sqft">--</div>
+        <div class="lbl">المساحة الإجمالية</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>هام:</strong> أنواع العشب المختلفة لها معدلات بذر مختلفة جدًا. Bermuda يحتاج فقط 2 رطل لكل 1,000 قدم مربع بينما Tall Fescue يحتاج 10 أرطال. اختيار المعدل الخطأ هو أكثر الأخطاء شيوعًا في مشاريع البذر.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">قائمة التدقيق قبل البذر</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-ph"><label>اختبر درجة حموضة التربة (المدى المثالي: 6.0-7.0)</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-kill"><label>أزل العشب والأعشاب الضارة الموجودة</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-loosen"><label>فكك الطبقة العلوية 1-2 بوصة من التربة</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-rake"><label>قم بتمشيط التربة برفق بعد نثر البذور لتغطيتها</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">دليل البذر الكامل &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">العناية بعد البذر</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-moist"><label>حافظ على التربة رطبة باستمرار حتى الإنبات</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-traffic"><label>تجنب حركة الأقدام حتى تستقر الشتلات</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-mow"><label>الجز الأول عندما يصل العشب إلى 3-4 بوصات</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">دليل العناية الكامل &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/how-to-plant-grass-seed/">تزرع البذور؟ اقرأ الدليل خطوة بخطوة</a>
+    <a class="section-link" href="/topsoil-calculator/">حاسبة التربة السطحية &rarr;</a>
+    <a class="section-link" href="/sod-calculator/">حاسبة العشب</a>
+  </div>
+</div>
+</div>
+
+<h2>ما كمية بذور العشب التي أحتاجها؟</h2>
+<p>كمية بذور العشب التي تحتاجها تعتمد على ثلاثة عوامل: حجم حديقتك، نوع العشب الذي تزرعه، وما إذا كنت تزرع عشبًا جديدًا أم تعيد بذر عشب موجود. أنواع العشب المختلفة لها معدلات بذر مختلفة بشكل كبير. على سبيل المثال، Kentucky Bluegrass يتطلب فقط 4 أرطال لكل 1,000 قدم مربع لعشب جديد، بينما Tall Fescue يتطلب 10 أرطال لكل 1,000 قدم مربع.</p>
+<p>للعشب الجديد، استخدم معدل "العشب الجديد" الأعلى لضمان تغطية كاملة على التربة العارية. لإعادة بذر عشب موجود، استخدم المعدل الأقل لأنك تملأ المناطق الرقيقة بدلاً من البدء من تربة عارية.</p>
+
+<h2>معدلات تغطية بذور العشب</h2>
+<p>معدلات التغطية تختلف بشكل كبير حسب نوع العشب:</p>
+<div class="card"><table class="data-table">
+  <tr><th>نوع العشب</th><th>عشب جديد (رطل/1,000 قدم مربع)</th><th>إعادة بذر (رطل/1,000 قدم مربع)</th></tr>
+  <tr><td>Bermuda</td><td>2</td><td>1</td></tr>
+  <tr><td>Centipede</td><td>0.5</td><td>0.3</td></tr>
+  <tr><td>Fine Fescue</td><td>5</td><td>2.5</td></tr>
+  <tr><td>Kentucky Bluegrass</td><td>4</td><td>2</td></tr>
+  <tr><td>Perennial Ryegrass</td><td>10</td><td>5</td></tr>
+  <tr><td>Tall Fescue</td><td>10</td><td>5</td></tr>
+  <tr><td>Bahia</td><td>10</td><td>5</td></tr>
+  <tr><td>Zoysia</td><td>2</td><td>1</td></tr>
+  <tr><td>Sun &amp; Shade Mix</td><td>6</td><td>3</td></tr>
+</table></div>
+
+<h2>نصائح لشراء بذور العشب</h2>
+<ul>
+  <li><strong>تحقق من الملصق</strong> لمعرفة معدل الإنبات ونسبة بذور الأعشاب الضارة. البذور عالية الجودة يجب أن يكون معدل إنباتها فوق 85% ومحتوى بذور الأعشاب الضارة أقل من 0.5%.</li>
+  <li><strong>اشترِ من مصدر محلي</strong> عندما يكون ذلك ممكنًا. الموردون المحليون يخزنون أصنافًا متكيفة مع مناخك الإقليمي.</li>
+  <li><strong>طابق العشب مع ظروفك.</strong> إذا كانت حديقتك بها ظل، اختر صنفًا مقاومًا للظل مثل Fine Fescue. للشمس الكاملة، Bermuda أو Zoysia يؤديان أفضل أداء.</li>
+  <li><strong>خزن البذور غير المستخدمة بشكل صحيح.</strong> بذور العشب تفقد حوالي 10-20% من صلاحيتها سنويًا تحت ظروف التخزين العادية. احتفظ بالبذور المتبقية في مكان بارد وجاف في حاوية محكمة الإغلاق. استخدم خلال عام واحد للحصول على أفضل النتائج.</li>
+</ul>
+
+<h2>لماذا يغير نوع البذور الكمية التي أحتاجها؟</h2>
+<p>أنواع العشب المختلفة لها أحجام بذور مختلفة بشكل كبير. بذور Kentucky Bluegrass صغيرة جدًا (حوالي 2 مليون بذرة لكل رطل)، لذا تحتاج فقط 4 أرطال لتغطية 1,000 قدم مربع. بذور Tall Fescue أكبر بكثير (حوالي 230,000 بذرة لكل رطل)، وتتطلب 10 أرطال لنفس المساحة. الحاسبة تأخذ هذه الاختلافات في الاعتبار تلقائيًا عند اختيار نوع العشب.</p>
+
+<h2>الأسئلة الشائعة</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">ما كمية بذور العشب التي أحتاجها لمساحة 1,000 قدم مربع؟</div>
+    <div class="faq-a">يعتمد ذلك على نوع العشب. Kentucky Bluegrass يتطلب حوالي 4 أرطال لكل 1,000 قدم مربع لعشب جديد، بينما Tall Fescue يتطلب حوالي 10 أرطال. استخدم الحاسبة أعلاه للحصول على الكمية الدقيقة لنوع عشبك.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">ما الفرق بين معدلات العشب الجديد وإعادة البذر؟</div>
+    <div class="faq-a">البذر لعشب جديد يستخدم معدلًا أعلى لضمان تغطية كاملة على التربة العارية. إعادة البذر تستخدم حوالي نصف المعدل لأنك تملأ المناطق الرقيقة داخل عشب موجود.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">هل يمكنني خلط أنواع مختلفة من بذور العشب؟</div>
+    <div class="faq-a">نعم، العديد من خلطات البذور التجارية تجمع بين أنواع متكاملة من العشب. على سبيل المثال، Kentucky Bluegrass المخلوط مع Perennial Ryegrass يوفر إنباتًا سريعًا من الـ ryegrass ومتانة طويلة الأمد من الـ bluegrass.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">ما هو أفضل وقت لزراعة بذور العشب؟</div>
+    <div class="faq-a">ازرع أعشاب الموسم البارد (Fescue، Bluegrass، Ryegrass) في أوائل الخريف عندما تكون درجات حرارة التربة لا تزال دافئة لكن درجات حرارة الهواء تبرد. ازرع أعشاب الموسم الدافئ (Bermuda، Zoysia، Centipede) في أواخر الربيع إلى أوائل الصيف.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>حاسبات ذات صلة</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">حاسبة العشب</a>
+    <a class="section-link" href="/topsoil-calculator/">حاسبة التربة السطحية</a>
+    <a class="section-link" href="/mulch-calculator/">حاسبة النشارة</a>
+  </div>
+</div>

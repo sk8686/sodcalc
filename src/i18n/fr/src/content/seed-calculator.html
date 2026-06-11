@@ -1,0 +1,158 @@
+<h1>Calculateur de Semences de Gazon</h1>
+<p>Calculez la quantité de semences de gazon dont vous avez besoin par type de gazon. Couvre les nouvelles pelouses et le sursemis avec des taux de couverture précis pour chaque variété principale de gazon.</p>
+
+<div class="card">
+<form id="seed-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-area">Surface de la Pelouse</label>
+      <input type="number" id="seed-area" placeholder="ex. 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="seed-unit">Unité</label>
+      <select id="seed-unit">
+        <option value="imperial">Pieds Carrés (pi²)</option>
+        <option value="metric">Mètres Carrés (m²)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="seed-type">Type de Gazon</label>
+      <select id="seed-type">
+        <option value="">Sélectionnez le type de gazon</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Centipede">Centipede</option>
+        <option value="Fine Fescue">Fétuque Fine</option>
+        <option value="Kentucky Bluegrass">Pâturin des Prés</option>
+        <option value="Perennial Ryegrass">Ray-Grass Anglais</option>
+        <option value="Tall Fescue">Fétuque Élevée</option>
+        <option value="Zoysia">Zoysia</option>
+        <option value="Sun & Shade Mix">Mélange Soleil &amp; Ombre</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="seed-purpose">Objectif</label>
+      <select id="seed-purpose">
+        <option value="new">Nouvelle Pelouse</option>
+        <option value="overseed">Sursemis (pelouse existante)</option>
+      </select>
+    </div>
+  </div>
+</form>
+
+<div id="seed-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">Vous Avez Besoin</div>
+    <div class="result-value" id="seed-total">--</div>
+    <div class="result-label">total de semences</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="seed-bags">--</div>
+        <div class="lbl">sacs standard de 5 lb</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-rate">--</div>
+        <div class="lbl">taux de couverture</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="seed-sqft">--</div>
+        <div class="lbl">surface totale</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Important :</strong> Différents types de gazon ont des taux de semis très différents. Le Bermuda ne nécessite que 2 lb par 1 000 pi² tandis que la fétuque élevée nécessite 10 lb. Choisir le mauvais taux est l'erreur la plus courante dans les projets de semis.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Checklist Pré-Semis</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-ph"><label>Tester le pH du sol (plage idéale : 6,0-7,0)</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-kill"><label>Enlever l'herbe et les mauvaises herbes existantes</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-loosen"><label>Ameublir les 2,5 à 5 cm supérieurs du sol</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-rake"><label>Ratisser légèrement après avoir épandu les semences pour les couvrir</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Guide complet de semis &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Entretien Post-Semis</div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-moist"><label>Garder le sol constamment humide jusqu'à la germination</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-traffic"><label>Éviter le piétinement jusqu'à ce que les semis soient établis</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="seed-mow"><label>Première tonte lorsque le gazon atteint 7,5-10 cm</label></div>
+      <a class="checklist-link" href="/how-to-plant-grass-seed/">Guide d'entretien complet &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/how-to-plant-grass-seed/">Vous plantez des semences ? Lisez le guide étape par étape</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculateur de Terre Végétale &rarr;</a>
+    <a class="section-link" href="/sod-calculator/">Calculateur de Gazon</a>
+  </div>
+</div>
+</div>
+
+<h2>Quelle Quantité de Semences de Gazon Ai-Je Besoin ?</h2>
+<p>La quantité de semences de gazon dont vous avez besoin dépend de trois facteurs : la taille de votre pelouse, le type de gazon que vous plantez et si vous semez une nouvelle pelouse ou faites du sursemis sur une pelouse existante. Différents types de gazon ont des taux de semis très différents. Par exemple, le pâturin des prés ne nécessite que 4 lb par 1 000 pieds carrés pour une nouvelle pelouse, tandis que la fétuque élevée nécessite 10 lb par 1 000 pieds carrés.</p>
+<p>Pour les nouvelles pelouses, utilisez le taux « nouvelle pelouse » plus élevé pour assurer une couverture complète sur sol nu. Pour le sursemis d'une pelouse existante, utilisez le taux plus bas puisque vous remplissez les zones clairsemées plutôt que de partir d'un sol nu.</p>
+
+<h2>Taux de Couverture des Semences de Gazon</h2>
+<p>Les taux de couverture varient considérablement selon le type de gazon :</p>
+<div class="card"><table class="data-table">
+  <tr><th>Type de Gazon</th><th>Nouvelle Pelouse (lb/1 000 pi²)</th><th>Sursemis (lb/1 000 pi²)</th></tr>
+  <tr><td>Bermuda</td><td>2</td><td>1</td></tr>
+  <tr><td>Centipede</td><td>0,5</td><td>0,3</td></tr>
+  <tr><td>Fétuque Fine</td><td>5</td><td>2,5</td></tr>
+  <tr><td>Pâturin des Prés</td><td>4</td><td>2</td></tr>
+  <tr><td>Ray-Grass Anglais</td><td>10</td><td>5</td></tr>
+  <tr><td>Fétuque Élevée</td><td>10</td><td>5</td></tr>
+  <tr><td>Bahia</td><td>10</td><td>5</td></tr>
+  <tr><td>Zoysia</td><td>2</td><td>1</td></tr>
+  <tr><td>Mélange Soleil &amp; Ombre</td><td>6</td><td>3</td></tr>
+</table></div>
+
+<h2>Conseils pour l'Achat de Semences de Gazon</h2>
+<ul>
+  <li><strong>Vérifiez l'étiquette</strong> pour le taux de germination et le pourcentage de graines de mauvaises herbes. Des semences de qualité doivent avoir un taux de germination supérieur à 85 % et une teneur en graines de mauvaises herbes inférieure à 0,5 %.</li>
+  <li><strong>Achetez auprès d'une source locale</strong> lorsque c'est possible. Les fournisseurs locaux stockent des variétés adaptées à votre climat régional.</li>
+  <li><strong>Adaptez le gazon à vos conditions.</strong> Si votre jardin a de l'ombre, choisissez une variété tolérante à l'ombre comme la fétuque fine. Pour le plein soleil, le Bermuda ou le Zoysia donnent les meilleurs résultats.</li>
+  <li><strong>Stockez correctement les semences non utilisées.</strong> Les semences de gazon perdent environ 10 à 20 % de viabilité par an dans des conditions de stockage normales. Conservez les semences restantes dans un endroit frais et sec, dans un récipient hermétique. Utilisez-les dans l'année pour de meilleurs résultats.</li>
+</ul>
+
+<h2>Pourquoi le Type de Semence Change-t-il la Quantité Nécessaire ?</h2>
+<p>Différentes espèces de gazon ont des tailles de graines très différentes. Les graines de pâturin des prés sont minuscules (environ 2 millions de graines par livre), vous n'avez donc besoin que de 4 lb pour couvrir 1 000 pi². Les graines de fétuque élevée sont beaucoup plus grosses (environ 230 000 graines par livre), nécessitant 10 lb pour la même surface. Le calculateur tient compte de ces différences automatiquement lorsque vous sélectionnez votre type de gazon.</p>
+
+<h2>Foire Aux Questions</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">Quelle quantité de semences de gazon ai-je besoin pour 1 000 pi² ?</div>
+    <div class="faq-a">Cela dépend du type de gazon. Le pâturin des prés nécessite environ 4 lb par 1 000 pi² pour une nouvelle pelouse, tandis que la fétuque élevée nécessite environ 10 lb. Utilisez le calculateur ci-dessus pour obtenir la quantité exacte pour votre type de gazon.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quelle est la différence entre les taux pour nouvelle pelouse et sursemis ?</div>
+    <div class="faq-a">Le semis d'une nouvelle pelouse utilise un taux plus élevé pour assurer une couverture complète sur sol nu. Le sursemis utilise environ la moitié du taux puisque vous remplissez les zones clairsemées d'une pelouse existante.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Puis-je mélanger différents types de semences de gazon ?</div>
+    <div class="faq-a">Oui, de nombreux mélanges commerciaux combinent des types de gazon complémentaires. Par exemple, le pâturin des prés mélangé au ray-grass anglais offre une germination rapide du ray-grass et une durabilité à long terme du pâturin.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quel est le meilleur moment pour planter des semences de gazon ?</div>
+    <div class="faq-a">Plantez les gazons de saison fraîche (fétuque, pâturin, ray-grass) au début de l'automne lorsque les températures du sol sont encore chaudes mais que les températures de l'air se refroidissent. Plantez les gazons de saison chaude (Bermuda, Zoysia, Centipede) de la fin du printemps au début de l'été.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Calculateurs Connexes</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Calculateur de Gazon</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculateur de Terre Végétale</a>
+    <a class="section-link" href="/mulch-calculator/">Calculateur de Paillis</a>
+  </div>
+</div>

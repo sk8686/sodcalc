@@ -1,0 +1,154 @@
+<h1>芝生計算機</h1>
+<p>必要な芝生の量を正確に計算します。芝生の面積を入力し、芝生の種類を選択すると、ロール数とパレット数で結果が表示されます &mdash; 設置前チェックリスト付き。</p>
+
+<div class="card">
+<form id="sod-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-area">芝生の面積</label>
+      <input type="number" id="sod-area" placeholder="例: 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="sod-unit">単位</label>
+      <select id="sod-unit">
+        <option value="imperial">平方フィート (sq ft)</option>
+        <option value="metric">平方メートル (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-type">芝生の種類</label>
+      <select id="sod-type">
+        <option value="">芝生の種類を選択</option>
+        <option value="Bermuda">バミューダ</option>
+        <option value="Zoysia">ゾイシア</option>
+        <option value="St. Augustine">セントオーガスチン</option>
+        <option value="Kentucky Bluegrass">ケンタッキーブルーグラス</option>
+        <option value="Tall Fescue">トールフェスク</option>
+        <option value="Centipede">センチピード</option>
+        <option value="Bahia">バヒア</option>
+        <option value="Perennial Ryegrass">ペレニアルライグラス</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="custom-roll">ロールサイズ (平方フィート)</label>
+      <input type="number" id="custom-roll" placeholder="10" min="1" step="any">
+      <span class="hint">標準ロール = 10平方フィート</span>
+    </div>
+  </div>
+</form>
+
+<div id="sod-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">必要量</div>
+    <div class="result-value" id="sod-rolls">--</div>
+    <div class="result-label">標準ロール</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="sod-pallets">--</div>
+        <div class="lbl">パレット</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-waste">--</div>
+        <div class="lbl">5%の余裕を含む</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-sqft">--</div>
+        <div class="lbl">総面積</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>重要:</strong> 芝生は生きた製品です。配送後24〜48時間以内に設置する必要があります。設置準備が整ってから注文してください。
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">設置前チェックリスト</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-ph"><label>土壌pHをテストする</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-kill"><label>既存の草や雑草を取り除く</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-level"><label>土壌をならし、適切な排水を確保する</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-moisten"><label>敷設前に土壌表面を軽く湿らせる</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-schedule"><label>設置日に芝生の配送をスケジュールする</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">完全な準備ガイド &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">設置後の手入れ</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-water"><label>最初の2週間は毎日たっぷりと水をやる</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-traffic"><label>少なくとも2週間は歩行を避ける</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-mow"><label>芝生が3〜4インチに達するまで最初の芝刈りを待つ</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-fertilize"><label>4〜6週間後にスターター肥料を施す</label></div>
+      <a class="checklist-link" href="/new-sod-care/">完全な手入れガイド &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links mt-2">
+    <a class="section-link" href="/how-to-lay-sod/">&#8594; 数値が出ましたか？芝生の敷き方はこちら</a>
+    <a class="section-link" href="/topsoil-calculator/">&#8594; 必要な表土の量を計算する</a>
+    <a class="section-link" href="/sod-vs-seed/">&#8594; 芝生があなたに適しているかわからない？芝生vs種子を比較</a>
+  </div>
+</div>
+</div>
+
+<h2>必要な芝生の量は？</h2>
+<p>必要な芝生の量を計算するには、芝生エリアの長さと幅をフィートで測定し、それらを掛け合わせて平方フィートを求めます。芝生が不規則な形状の場合は、小さな長方形に分割し、それぞれを計算して合計します。</p>
+<p>総平方フィートがわかったら、標準的な芝生ロールのサイズ（通常10平方フィート）で割ってロール数を求めます。縁取り、カーブ、輸送中に破損する可能性のある部分を考慮して、5〜10%追加してください。</p>
+<p>ほとんどの芝生はパレット単位で販売され、各パレットには約450〜500平方フィート（標準ロール50本）が含まれています。大規模なプロジェクトでは、パレット単位での注文がより便利で、個別のロールよりも費用対効果が高いことが多いです。</p>
+<p>不規則な形状の芝生の場合、最も簡単な方法は方眼紙に庭のスケッチを描き、長方形に分割して個々の面積を合計することです。曲線の縁の場合は、曲線を形状を平均化する直線として扱います &mdash; 設置時に実際の曲線をカットし、過大評価による余剰分が廃棄許容量になります。</p>
+<p>斜面や丘がある場合は、傾斜面の面積ではなく、平坦なフットプリント（長さ×幅）を測定してください。芝生はわずかに伸びることができ、斜面の長さの差は通常、5%の廃棄許容量でカバーできるほど小さいです。</p>
+
+<h2>ターフ計算機</h2>
+<p>芝生と呼ぶかターフと呼ぶかにかかわらず、計算は同じです。米国とカナダでは「Sod」という用語がより一般的ですが、「Turf」は英国、オーストラリア、ニュージーランドで広く使われています。この計算機は両方に対応しています &mdash; 面積を入力するだけで、ロール数またはパレット数で結果が表示されます。</p>
+
+<h2>パレットにはどのくらいの芝生が入っていますか？</h2>
+<p>標準的な芝生のパレットには<strong>450〜500平方フィート</strong>が含まれています。通常、以下のように分解されます：</p>
+<div class="card"><table class="data-table">
+  <tr><th>形式</th><th>面積</th><th>パレットあたり</th></tr>
+  <tr><td>ロール</td><td>10平方フィート</td><td>50ロール</td></tr>
+  <tr><td>スラブ</td><td>2.67平方フィート</td><td>100スラブ</td></tr>
+  <tr><td>大型ロール</td><td>15平方フィート</td><td>30ロール</td></tr>
+</table></div>
+<p>芝生のサイズは農場や地域によって異なる場合があります。サプライヤーが標準外のサイズを使用している場合は、上記の計算機でカスタムロールサイズオプションを使用してください。</p>
+
+<h2>芝生ロールのサイズ</h2>
+<p>標準的な芝生ロールのサイズは通常、幅2フィート×長さ5フィートで、1ロールあたり10平方フィートをカバーします。スラブは通常16インチ×24インチで、約2.67平方フィートをカバーします。大型ロールは15平方フィート以上をカバーする場合があります。計算する前に、必ずサプライヤーに正確なサイズを確認してください。</p>
+
+<h2>よくある質問</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">1,000平方フィートに必要な芝生のパレット数は？</div>
+    <div class="faq-a">1,000平方フィートの場合、約2パレットの芝生が必要です（1パレットあたり500平方フィートと仮定）。カットや無駄を考慮して5%追加し、2.1パレットを注文してください。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">どのくらい余分に芝生を注文すべきですか？</div>
+    <div class="faq-a">縁取り、カーブ、破損した部分を考慮して、5〜10%余分に芝生を注文してください。数ロール余る方が、不足するよりも良いです。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">既存の芝生の上に新しい芝生を敷けますか？</div>
+    <div class="faq-a">いいえ。新しい芝生を敷く前に、既存の草や植生を取り除く必要があります。芝生の根が定着するには、裸の土と直接接触する必要があります。古い芝生の上に新しい芝生を敷くと、根付きが妨げられ、新しい芝生が枯れる原因になります。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">芝生が根付くまでどのくらいかかりますか？</div>
+    <div class="faq-a">適切な水やりを行えば、芝生は通常10〜14日以内に根付き始めます。完全な根の定着には4〜6週間かかります。この期間中は激しい歩行を避け、土壌を常に湿らせてください。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">ターフと芝生は同じものですか？</div>
+    <div class="faq-a">はい、ターフと芝生は同じものを指します：ロールまたはスラブで販売される事前に育てられた芝生です。「Sod」は米国でより一般的な用語で、「Turf」は英国、オーストラリア、その他の英語圏で広く使われています。</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>関連計算機</h2>
+  <div class="section-links">
+    <a class="section-link" href="/grass-seed-calculator/">芝生の種計算機</a>
+    <a class="section-link" href="/topsoil-calculator/">表土計算機</a>
+    <a class="section-link" href="/mulch-calculator/">マルチ計算機</a>
+  </div>
+</div>

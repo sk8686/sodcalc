@@ -1,0 +1,154 @@
+<h1>Sod Calculator</h1>
+<p>Calculate exactly how much sod you need. Enter your lawn area, select your grass type, and get your results in rolls and pallets &mdash; with a pre-installation checklist built right in.</p>
+
+<div class="card">
+<form id="sod-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-area">Lawn Area</label>
+      <input type="number" id="sod-area" placeholder="e.g. 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="sod-unit">Unit</label>
+      <select id="sod-unit">
+        <option value="imperial">Square Feet (sq ft)</option>
+        <option value="metric">Square Meters (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-type">Grass Type</label>
+      <select id="sod-type">
+        <option value="">Select grass type</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Zoysia">Zoysia</option>
+        <option value="St. Augustine">St. Augustine</option>
+        <option value="Kentucky Bluegrass">Kentucky Bluegrass</option>
+        <option value="Tall Fescue">Tall Fescue</option>
+        <option value="Centipede">Centipede</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Perennial Ryegrass">Perennial Ryegrass</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="custom-roll">Roll Size (sq ft)</label>
+      <input type="number" id="custom-roll" placeholder="10" min="1" step="any">
+      <span class="hint">Standard roll = 10 sq ft</span>
+    </div>
+  </div>
+</form>
+
+<div id="sod-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">You Need</div>
+    <div class="result-value" id="sod-rolls">--</div>
+    <div class="result-label">standard rolls</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="sod-pallets">--</div>
+        <div class="lbl">pallets</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-waste">--</div>
+        <div class="lbl">with 5% waste</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-sqft">--</div>
+        <div class="lbl">total area</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Important:</strong> Sod is a living product. It must be installed within 24-48 hours of delivery. Order only when you are ready to install.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Pre-Installation Checklist</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-ph"><label>Test soil pH</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-kill"><label>Remove existing grass and weeds</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-level"><label>Level the soil and ensure proper drainage</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-moisten"><label>Lightly moisten soil surface before laying</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-schedule"><label>Schedule sod delivery for installation day</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">Complete preparation guide &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Post-Installation Care</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-water"><label>Water deeply every day for the first 2 weeks</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-traffic"><label>Avoid foot traffic for at least 2 weeks</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-mow"><label>Wait until sod reaches 3-4 inches before first mow</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-fertilize"><label>Apply starter fertilizer after 4-6 weeks</label></div>
+      <a class="checklist-link" href="/new-sod-care/">Complete care guide &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links mt-2">
+    <a class="section-link" href="/how-to-lay-sod/">&#8594; Got your numbers? Here is how to lay sod</a>
+    <a class="section-link" href="/topsoil-calculator/">&#8594; Calculate how much topsoil you will need</a>
+    <a class="section-link" href="/sod-vs-seed/">&#8594; Not sure sod is right for you? Compare sod vs seed</a>
+  </div>
+</div>
+</div>
+
+<h2>How Much Sod Do I Need?</h2>
+<p>To calculate how much sod you need, measure the length and width of your lawn area in feet and multiply them together to get the square footage. If your lawn has an irregular shape, break it into smaller rectangles, calculate each one, and add them together.</p>
+<p>Once you have your total square footage, divide by the size of a standard sod roll (typically 10 sq ft) to get the number of rolls. Add 5-10% extra to account for cutting around edges, curves, and any pieces that may be damaged during transport.</p>
+<p>Most sod is sold by the pallet, with each pallet containing approximately 450-500 square feet (50 standard rolls). For large projects, ordering by the pallet is more convenient and often more cost-effective than ordering individual rolls.</p>
+<p>For irregularly shaped lawns, the easiest method is to sketch your yard on graph paper, divide it into rectangles, and add up the individual areas. For curved edges, treat the curve as a straight line that averages out the shape — you will cut the actual curve during installation and the excess from overestimating becomes your waste allowance.</p>
+<p>If you have a slope or hill, measure the flat footprint (length × width), not the sloped surface area. Sod can stretch slightly and the slope length difference is typically small enough that 5% waste covers it.</p>
+
+<h2>Turf Calculator</h2>
+<p>Whether you call it sod or turf, the calculation is the same. In the United States and Canada, the term "sod" is more common, while "turf" is widely used in the United Kingdom, Australia, and New Zealand. This calculator works for both &mdash; simply enter your area and get your results in rolls or pallets.</p>
+
+<h2>How Much Sod Is on a Pallet?</h2>
+<p>A standard pallet of sod contains <strong>450 to 500 square feet</strong> of coverage. This typically breaks down to:</p>
+<div class="card"><table class="data-table">
+  <tr><th>Format</th><th>Coverage</th><th>Per Pallet</th></tr>
+  <tr><td>Roll</td><td>10 sq ft</td><td>50 rolls</td></tr>
+  <tr><td>Slab</td><td>2.67 sq ft</td><td>175 slabs</td></tr>
+  <tr><td>Large Roll</td><td>15 sq ft</td><td>30 rolls</td></tr>
+</table></div>
+<p>Sod sizes can vary by farm and region. If your supplier uses non-standard sizes, use the custom roll size option in the calculator above.</p>
+
+<h2>Sod Roll Sizes</h2>
+<p>Standard sod rolls typically measure 2 feet wide by 5 feet long, covering 10 square feet each. Slabs are usually 16 inches by 24 inches, covering approximately 2.67 square feet. Large rolls may cover 15 square feet or more. Always confirm the exact size with your supplier before calculating.</p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">How many pallets of sod do I need for 1,000 sq ft?</div>
+    <div class="faq-a">For 1,000 square feet, you need approximately 2 pallets of sod (assuming 500 sq ft per pallet). With 5% extra for waste and cuts, order 2.1 pallets.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How much extra sod should I order?</div>
+    <div class="faq-a">Order 5-10% extra sod to account for cuts around edges, curves, and any damaged pieces. It is better to have a few extra rolls than to come up short.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I lay sod over existing grass?</div>
+    <div class="faq-a">No. You must remove existing grass and vegetation before laying new sod. The sod roots need direct contact with bare soil to establish. Laying sod over old grass will prevent rooting and cause the new sod to die.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How long does sod take to root?</div>
+    <div class="faq-a">Sod typically begins rooting within 10-14 days under proper watering. Full root establishment takes 4-6 weeks. During this period, avoid heavy foot traffic and keep the soil consistently moist.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is turf the same as sod?</div>
+    <div class="faq-a">Yes, turf and sod refer to the same thing: pre-grown grass that comes in rolls or slabs. "Sod" is the more common term in the United States, while "turf" is widely used in the UK, Australia, and other English-speaking countries.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Related Calculators</h2>
+  <div class="section-links">
+    <a class="section-link" href="/grass-seed-calculator/">Grass Seed Calculator</a>
+    <a class="section-link" href="/topsoil-calculator/">Topsoil Calculator</a>
+    <a class="section-link" href="/mulch-calculator/">Mulch Calculator</a>
+  </div>
+</div>

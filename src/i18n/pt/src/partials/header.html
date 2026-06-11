@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="{{dir}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sodcalc.com/{{path}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="https://sodcalc.com/{{path}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SodCalc">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://sodcalc.com/{{basePath}}">
+<link rel="alternate" hreflang="zh-CN" href="https://sodcalc.com/zh/{{basePath}}">
+<link rel="alternate" hreflang="es" href="https://sodcalc.com/es/{{basePath}}">
+<link rel="alternate" hreflang="hi" href="https://sodcalc.com/hi/{{basePath}}">
+<link rel="alternate" hreflang="ar" href="https://sodcalc.com/ar/{{basePath}}">
+<link rel="alternate" hreflang="pt" href="https://sodcalc.com/pt/{{basePath}}">
+<link rel="alternate" hreflang="fr" href="https://sodcalc.com/fr/{{basePath}}">
+<link rel="alternate" hreflang="ja" href="https://sodcalc.com/ja/{{basePath}}">
+<link rel="alternate" hreflang="x-default" href="https://sodcalc.com/{{basePath}}">
+<link rel="stylesheet" href="{{langPathPrefix}}/css/styles.css">
+<script type="application/ld+json">{{schema}}</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+<nav class="nav" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a href="{{langPathPrefix}}/" class="nav-logo">SodCalc</a>
+    <button class="nav-toggle" aria-label="Alternar navegação">&#9776;</button>
+    <div class="nav-menu">
+      <a href="{{langPathPrefix}}/sod-calculator/">Calculadora de Grama</a>
+      <a href="{{langPathPrefix}}/grass-seed-calculator/">Calculadora de Sementes</a>
+      <a href="{{langPathPrefix}}/sod-vs-seed/">Grama vs Semente</a>
+      <a href="{{langPathPrefix}}/grass-types/">Tipos de Grama</a>
+      <a href="{{langPathPrefix}}/how-to-lay-sod/">Como Instalar Grama</a>
+      <a href="{{langPathPrefix}}/common-sod-mistakes/">Erros Comuns</a>
+    </div>
+    <div class="lang-select">
+      <button class="lang-btn" aria-label="Selecionar idioma" aria-expanded="false">PT</button>
+      <div class="lang-dropdown">
+        <a href="/">English</a>
+        <a href="/zh/">中文</a>
+        <a href="/es/">Español</a>
+        <a href="/hi/">हिन्दी</a>
+        <a href="/ar/">العربية</a>
+        <a href="/fr/">Français</a>
+        <a href="/ja/">日本語</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="container" id="main-content">{{breadcrumb}}<!-- content -->

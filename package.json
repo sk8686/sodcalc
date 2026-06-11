@@ -1,13 +1,9 @@
 {
-  "name": "turf-calculator",
+  "name": "sodcalc",
   "version": "1.0.0",
+  "description": "SodCalc - Lawn project guide & calculator site",
   "private": true,
-  "description": "Free lawn and turf calculators for homeowners",
   "scripts": {
-    "build": "node src/build.js",
-    "serve": "npx serve dist -p 3000"
-  },
-  "dependencies": {
-    "playwright": "^1.60.0"
+    "build": "node src/build.js"
   }
 }

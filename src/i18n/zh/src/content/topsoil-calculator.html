@@ -1,0 +1,121 @@
+<h1>表土计算器</h1>
+<p>计算您的草坪项目需要多少表土。无论您是在准备草皮安装还是修建花园苗床，都能获得以立方码或袋数为单位的精确用量。</p>
+
+<div class="card">
+<form id="topsoil-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-area">面积</label>
+      <input type="number" id="topsoil-area" placeholder="例如 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="topsoil-unit">单位</label>
+      <select id="topsoil-unit">
+        <option value="imperial">平方英尺 (sq ft)</option>
+        <option value="metric">平方米 (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-depth">深度 (英寸)</label>
+      <input type="number" id="topsoil-depth" value="4" min="1" max="24" step="0.5" required>
+      <span class="hint">建议：草皮准备用4英寸深</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="topsoil-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">您需要</div>
+    <div class="result-value" id="topsoil-cy">--</div>
+    <div class="result-label">立方码</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="topsoil-cf">--</div>
+        <div class="lbl">立方英尺</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-bags">--</div>
+        <div class="lbl">袋 (每袋0.75立方英尺)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-sqft">--</div>
+        <div class="lbl">该深度下的面积</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>重要提示：</strong>对于超过2立方码的项目，从本地供应商批量送货通常比购买单袋划算得多。
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">铺设前检查清单</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-clear"><label>清除已有的草、杂草和杂物</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-loosen"><label>翻松3-4英寸深的现有土壤</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-level"><label>整理坡度确保排水远离建筑物</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">完整土壤准备指南 &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">铺设后检查清单</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-compact"><label>轻轻碾压或夯实使土壤沉降</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-water"><label>充分浇水帮助土壤沉降</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-check"><label>铺草皮或播种前重新检查坡度</label></div>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">草皮计算器 &rarr;</a>
+    <a class="section-link" href="/grass-seed-calculator/">草籽计算器 &rarr;</a>
+  </div>
+</div>
+</div>
+
+<h2>我需要多少表土？</h2>
+<p>要计算您需要多少表土，将面积（平方英尺）乘以所需深度（英寸），然后除以324得到立方码。公式为：<strong>立方码 = (面积（平方英尺）&times; 深度（英寸）) &divide; 324</strong>。</p>
+<p>例如，1,000平方英尺的草坪，4英寸深，大约需要12.3立方码的表土。</p>
+
+<h2>草皮下方表土应该多深？</h2>
+<p>铺设草皮建议<strong>4英寸深的优质表土</strong>。这为草皮根部提供了足够的深度来扎根并获取养分。如果现有土壤质量良好，2-3英寸的表土作为改良层可能就足够了。</p>
+<p>对于花园苗床，6-12英寸是理想的深度，可为蔬菜和花卉提供深层根系生长空间。</p>
+<p>购买表土时，寻找深色、松碎、闻起来有泥土香味的材料 &mdash; 而非酸味或化学味。筛过的表土经过过滤，去除了石块、根系和杂物，非常适合草皮准备和花园苗床。未筛表土更便宜，但可能含有土块和石子，造成不平整的表面；它更适合填补低洼处或大面积整平项目，因为您会铺设较厚的土层。</p>
+
+<h2>土壤计算器 &mdash; 多少袋等于一立方码？</h2>
+<p>一立方码表土等于27立方英尺。标准袋表土为0.75立方英尺，因此需要<strong>36袋才能等于一立方码</strong>。对于超过约2立方码的项目，批量送货几乎总是比购买袋装更实用、更划算。</p>
+
+<h2>常见问题</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">新建草坪需要多少表土？</div>
+    <div class="faq-a">铺设草皮需要约4英寸深的表土。1,000平方英尺、4英寸深大约需要12.3立方码的表土。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">草皮下方表土应该多深？</div>
+    <div class="faq-a">建议在铺设草皮前铺设4英寸深的优质表土。这为草皮根部提供了足够的深度来扎根并获取养分和水分。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">多少袋表土等于一立方码？</div>
+    <div class="faq-a">标准袋表土为0.75立方英尺。需要36袋才能等于一立方码（27立方英尺）。对于大项目，批量送货通常比买袋装更划算。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">我可以用花园土代替表土吗？</div>
+    <div class="faq-a">花园土通常富含堆肥和有机物，适合花园苗床但不适合草皮安装。草皮项目请使用筛过的表土，以确保平整一致的基层。</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>相关计算器</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">草皮计算器</a>
+    <a class="section-link" href="/grass-seed-calculator/">草籽计算器</a>
+    <a class="section-link" href="/mulch-calculator/">覆盖物计算器</a>
+  </div>
+</div>

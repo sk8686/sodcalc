@@ -1,0 +1,110 @@
+<h1>حاسبة النشارة</h1>
+<p>احسب كمية النشارة التي تحتاجها لأحواض الحدائق وحلقات الأشجار ومشاريع تنسيق الحدائق. احصل على الكمية الدقيقة بالياردة المكعبة أو الأكياس.</p>
+
+<div class="card">
+<form id="mulch-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-area">المساحة</label>
+      <input type="number" id="mulch-area" placeholder="مثال 500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="mulch-unit">الوحدة</label>
+      <select id="mulch-unit">
+        <option value="imperial">قدم مربع (sq ft)</option>
+        <option value="metric">متر مربع (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-depth">العمق (بوصة)</label>
+      <input type="number" id="mulch-depth" value="3" min="1" max="12" step="0.5" required>
+      <span class="hint">موصى به: 3-4 بوصات</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="mulch-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">أنت تحتاج</div>
+    <div class="result-value" id="mulch-cy">--</div>
+    <div class="result-label">ياردة مكعبة</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="mulch-bags">--</div>
+        <div class="lbl">كيس (2 قدم مكعب)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="mulch-sqft">--</div>
+        <div class="lbl">المساحة عند العمق</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>هام:</strong> ابقِ النشارة على بعد 2-3 بوصات من جذوع الأشجار وسيقان النباتات. تكديس النشارة على الجذوع (يسمى غالبًا "تغطية البركان") يحبس الرطوبة ويمكن أن يسبب التعفن والأمراض.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">قائمة التدقيق قبل التغطية</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-weed"><label>أزل الأعشاب الضارة الموجودة من المنطقة</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-moisten"><label>اسقِ التربة قبل وضع النشارة</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-depth"><label>تحقق من عمق النشارة الموجودة &mdash; أزل الزائد إذا كان فوق 4 بوصات</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">صيانة النشارة السنوية</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-check"><label>تحقق من عمق النشارة سنويًا &mdash; جدد إلى 3-4 بوصات</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-fluff"><label>قم بتقليب النشارة المضغوطة قبل إضافة مادة جديدة</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-wood"><label>ضع في اعتبارك رقائق الخشب الطازجة للممرات ومناطق اللعب</label></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>ما كمية النشارة التي أحتاجها؟</h2>
+<p>لحساب كمية النشارة التي تحتاجها، استخدم الصيغة: <strong>الياردات المكعبة = (المساحة بالقدم المربع &times; العمق بالبوصة) &divide; 324</strong>. لحوض حديقة نموذجي بمساحة 500 قدم مربع بعمق 3 بوصات، ستحتاج حوالي 4.6 ياردة مكعبة من النشارة، أو حوالي 62 كيسًا (2 قدم مكعب لكل كيس).</p>
+
+<h2>ما هو العمق المثالي للنشارة؟</h2>
+<p>ضع النشارة بعمق <strong>3 إلى 4 بوصات</strong> للتطبيقات الجديدة. هذا العمق يمنع الأعشاب الضارة بشكل فعال مع السماح للماء بالنفاذ. للنشارة الموجودة، حافظ على عمق 3-4 بوصات بالتجديد السنوي مع تحلل المادة العضوية. تجنب تجاوز عمق النشارة 4 بوصات، لأن هذا يمكن أن يقيد الأكسجين عن جذور النباتات.</p>
+<p>عند اختيار النشارة، ضع في اعتبارك أهدافك: النشارة العضوية مثل رقائق الخشب واللحاء المقطع تتحلل مع مرور الوقت، مما يحسن بنية التربة ويضيف مغذيات. النشارة غير العضوية مثل الحجر أو المطاط تدوم إلى أجل غير مسمى لكنها لا تفعل شيئًا لصحة التربة &mdash; إنها مناسبة بشكل أفضل للممرات الدائمة أو المناطق الزخرفية حيث لا تريد تجديدًا سنويًا.</p>
+<p>كقاعدة عامة، 2-3 بوصات كافية لمعظم أحواض الزهور والزراعات الزينة. استخدم 3-4 بوصات عندما يكون منع الأعشاب الضارة أولوية قصوى، مثل حول الأشجار أو على طول خطوط الأسوار. لا تتجاوز أبدًا 4 بوصات من عمق النشارة &mdash; الكثير من النشارة يمكن أن يخنق جذور النباتات بتقييد تبادل الأكسجين ويمكن أن يخلق موطنًا للقوارض والآفات.</p>
+
+<h2>تغطية النشارة &mdash; الأكياس مقابل الجملة</h2>
+<p>الكيس القياسي من النشارة يغطي حوالي 12 قدمًا مربعًا بعمق 2 بوصة، أو 8 أقدام مربعة بعمق 3 بوصات. الياردة المكعبة من النشارة (27 قدمًا مكعبًا) تغطي حوالي 108 أقدام مربعة بعمق 3 بوصات. للمشاريع التي تتطلب أكثر من 5 ياردات مكعبة، التوصيل بالجملة عادة أكثر عملية واقتصادية من شراء الأكياس الفردية.</p>
+
+<h2>الأسئلة الشائعة</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">ما كمية النشارة التي أحتاجها لمساحة 1,000 قدم مربع؟</div>
+    <div class="faq-a">لمساحة 1,000 قدم مربع بعمق 3 بوصات، تحتاج حوالي 9.3 ياردة مكعبة من النشارة، أو حوالي 125 كيسًا (2 قدم مكعب لكل كيس).</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">ما هو العمق المثالي للنشارة؟</div>
+    <div class="faq-a">ضع النشارة بعمق 3-4 بوصات للتطبيقات الجديدة. حافظ على النشارة الموجودة عند 3-4 بوصات بالتجديد السنوي مع تحللها. تجنب تكديس النشارة على جذوع الأشجار.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">كم كيسًا من النشارة يساوي ياردة مكعبة؟</div>
+    <div class="faq-a">الكيس القياسي من النشارة هو 2 قدم مكعب. تحتاج 13.5 كيسًا ليساوي ياردة مكعبة واحدة (27 قدمًا مكعبًا). للمشاريع الأكبر من 5 ياردات مكعبة، التوصيل بالجملة عادة أكثر اقتصادية.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">هل يجب إزالة النشارة القديمة قبل إضافة الجديدة؟</div>
+    <div class="faq-a">لا تحتاج إلى إزالة النشارة القديمة إلا إذا شكلت طبقة متلبدة تمنع نفاذ الماء، أو إذا كانت هناك علامات نمو فطري أو مشاكل آفات. في معظم الحالات، ببساطة قم بتقليب النشارة القديمة وأضف الجديدة فوقها.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>حاسبات ذات صلة</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">حاسبة العشب</a>
+    <a class="section-link" href="/grass-seed-calculator/">حاسبة البذور</a>
+    <a class="section-link" href="/topsoil-calculator/">حاسبة التربة السطحية</a>
+  </div>
+</div>

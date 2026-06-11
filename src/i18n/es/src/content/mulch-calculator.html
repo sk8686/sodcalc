@@ -1,0 +1,110 @@
+<h1>Calculadora de Mantillo</h1>
+<p>Calcule cuánto mantillo necesita para camas de jardín, anillos de árboles y proyectos de paisajismo. Obtenga la cantidad exacta en yardas cúbicas o bolsas.</p>
+
+<div class="card">
+<form id="mulch-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-area">Área</label>
+      <input type="number" id="mulch-area" placeholder="ej. 500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="mulch-unit">Unidad</label>
+      <select id="mulch-unit">
+        <option value="imperial">Pies Cuadrados (pies²)</option>
+        <option value="metric">Metros Cuadrados (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="mulch-depth">Profundidad (pulgadas)</label>
+      <input type="number" id="mulch-depth" value="3" min="1" max="12" step="0.5" required>
+      <span class="hint">Recomendado: 3-4 pulgadas</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="mulch-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">Necesita</div>
+    <div class="result-value" id="mulch-cy">--</div>
+    <div class="result-label">yardas cúbicas</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="mulch-bags">--</div>
+        <div class="lbl">bolsas (2 cu ft)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="mulch-sqft">--</div>
+        <div class="lbl">área a profundidad</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Importante:</strong> Mantenga el mantillo a 2-3 pulgadas de distancia de los troncos de los árboles y los tallos de las plantas. Amontonar mantillo contra los troncos (a menudo llamado "mulching volcánico") atrapa la humedad y puede causar pudrición y enfermedades.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Lista de Verificación Previa al Mantillo</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-weed"><label>Eliminar las malas hierbas existentes del área</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-moisten"><label>Regar el suelo antes de aplicar el mantillo</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-depth"><label>Verificar la profundidad del mantillo existente &mdash; eliminar el exceso si supera las 4 pulgadas</label></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Mantenimiento Anual del Mantillo</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-check"><label>Verificar la profundidad del mantillo anualmente &mdash; reponer a 3-4 pulgadas</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-fluff"><label>Esponjar el mantillo compactado antes de agregar material nuevo</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ml-wood"><label>Considere astillas de madera frescas para caminos y áreas de juego</label></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>¿Cuánto Mantillo Necesito?</h2>
+<p>Para calcular cuánto mantillo necesita, use la fórmula: <strong>Yardas Cúbicas = (Área en pies² &times; Profundidad en pulgadas) &divide; 324</strong>. Para una cama de jardín típica de 500 pies cuadrados a 3 pulgadas de profundidad, necesitará aproximadamente 4.6 yardas cúbicas de mantillo, o aproximadamente 62 bolsas (2 pies cúbicos cada una).</p>
+
+<h2>¿Cuál Es la Profundidad Ideal del Mantillo?</h2>
+<p>Aplique mantillo a una profundidad de <strong>3 a 4 pulgadas</strong> para aplicaciones nuevas. Esta profundidad suprime las malas hierbas de manera efectiva mientras permite que el agua penetre. Para mantillo existente, mantenga la profundidad de 3-4 pulgadas rellenando anualmente a medida que el material orgánico se descompone. Evite que la profundidad del mantillo exceda las 4 pulgadas, ya que esto puede restringir el oxígeno a las raíces de las plantas.</p>
+<p>Al elegir mantillo, considere sus objetivos: los mantillos orgánicos como astillas de madera y corteza triturada se descomponen con el tiempo, mejorando la estructura del suelo y agregando nutrientes. Los mantillos inorgánicos como piedra o caucho duran indefinidamente pero no hacen nada por la salud del suelo &mdash; son más adecuados para caminos permanentes o áreas decorativas donde no desea reposición anual.</p>
+<p>Como regla general, 2-3 pulgadas es suficiente para la mayoría de los macizos de flores y plantaciones ornamentales. Use 3-4 pulgadas cuando la supresión de malas hierbas sea una prioridad máxima, como alrededor de árboles o a lo largo de líneas de cercas. Nunca exceda las 4 pulgadas de profundidad de mantillo &mdash; demasiado mantillo puede sofocar las raíces de las plantas al restringir el intercambio de oxígeno y puede crear un hábitat para roedores y plagas.</p>
+
+<h2>Cobertura de Mantillo &mdash; Bolsas vs A Granel</h2>
+<p>Una bolsa estándar de mantillo cubre aproximadamente 12 pies cuadrados a 2 pulgadas de profundidad, u 8 pies cuadrados a 3 pulgadas de profundidad. Una yarda cúbica de mantillo (27 pies cúbicos) cubre aproximadamente 108 pies cuadrados a 3 pulgadas de profundidad. Para proyectos que requieren más de 5 yardas cúbicas, la entrega a granel suele ser más práctica y rentable que comprar bolsas individuales.</p>
+
+<h2>Preguntas Frecuentes</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">¿Cuánto mantillo necesito para 1,000 pies²?</div>
+    <div class="faq-a">Para 1,000 pies cuadrados a 3 pulgadas de profundidad, necesita aproximadamente 9.3 yardas cúbicas de mantillo, o aproximadamente 125 bolsas (2 cu ft cada una).</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Cuál es la profundidad ideal del mantillo?</div>
+    <div class="faq-a">Aplique mantillo a una profundidad de 3-4 pulgadas para aplicaciones nuevas. Mantenga el mantillo existente a 3-4 pulgadas rellenando anualmente a medida que se descompone. Evite amontonar mantillo contra los troncos de los árboles.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Cuántas bolsas de mantillo equivalen a una yarda cúbica?</div>
+    <div class="faq-a">Una bolsa estándar de mantillo es de 2 pies cúbicos. Se necesitan 13.5 bolsas para igualar una yarda cúbica (27 pies cúbicos). Para proyectos de más de 5 yardas cúbicas, la entrega a granel suele ser más rentable.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">¿Debo quitar el mantillo viejo antes de agregar nuevo?</div>
+    <div class="faq-a">No necesita quitar el mantillo viejo a menos que haya formado una capa compactada que impida la penetración del agua, o si hay signos de crecimiento de hongos o problemas de plagas. En la mayoría de los casos, simplemente esponje el mantillo viejo y agregue nuevo encima.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Calculadoras Relacionadas</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Calculadora de Césped</a>
+    <a class="section-link" href="/grass-seed-calculator/">Calculadora de Semillas</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculadora de Tierra Vegetal</a>
+  </div>
+</div>

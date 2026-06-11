@@ -1,0 +1,121 @@
+<h1>Calculateur de Terre Végétale</h1>
+<p>Calculez la quantité de terre végétale dont vous avez besoin pour votre projet de pelouse. Que vous prépariez l'installation de gazon ou que vous construisiez des plates-bandes, obtenez la quantité exacte en verges cubes ou en sacs.</p>
+
+<div class="card">
+<form id="topsoil-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-area">Surface</label>
+      <input type="number" id="topsoil-area" placeholder="ex. 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="topsoil-unit">Unité</label>
+      <select id="topsoil-unit">
+        <option value="imperial">Pieds Carrés (pi²)</option>
+        <option value="metric">Mètres Carrés (m²)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="topsoil-depth">Profondeur (pouces)</label>
+      <input type="number" id="topsoil-depth" value="4" min="1" max="24" step="0.5" required>
+      <span class="hint">Recommandé : 4 pouces pour la préparation du gazon</span>
+    </div>
+    <div class="calc-group"></div>
+  </div>
+</form>
+
+<div id="topsoil-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">Vous Avez Besoin</div>
+    <div class="result-value" id="topsoil-cy">--</div>
+    <div class="result-label">verges cubes</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="topsoil-cf">--</div>
+        <div class="lbl">pieds cubes</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-bags">--</div>
+        <div class="lbl">sacs (0,75 pi³)</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="topsoil-sqft">--</div>
+        <div class="lbl">surface à cette profondeur</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Important :</strong> Pour les projets de plus de 2 verges cubes, la livraison en vrac par un fournisseur local est généralement bien plus économique que l'achat de sacs individuels.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Checklist Pré-Épandage</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-clear"><label>Enlever l'herbe, les mauvaises herbes et les débris existants</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-loosen"><label>Ameublir le sol existant sur 7,5-10 cm de profondeur</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-level"><label>Niveler pour un bon drainage loin des structures</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">Guide complet de préparation du sol &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Checklist Post-Épandage</div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-compact"><label>Rouler ou tasser légèrement pour stabiliser le sol</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-water"><label>Arroser abondamment pour aider le sol à se stabiliser</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="ts-check"><label>Revérifier le nivellement avant de poser le gazon ou de semer</label></div>
+    </div>
+  </div>
+
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Calculateur de Gazon &rarr;</a>
+    <a class="section-link" href="/grass-seed-calculator/">Calculateur de Semences &rarr;</a>
+  </div>
+</div>
+</div>
+
+<h2>Quelle Quantité de Terre Végétale Ai-Je Besoin ?</h2>
+<p>Pour calculer la quantité de terre végétale dont vous avez besoin, multipliez votre surface (en pieds carrés) par votre profondeur souhaitée (en pouces), puis divisez par 324 pour obtenir des verges cubes. La formule est : <strong>Verges Cubes = (Surface en pi² &times; Profondeur en pouces) &divide; 324</strong>.</p>
+<p>Par exemple, une pelouse de 1 000 pi² à 4 pouces de profondeur nécessite environ 12,3 verges cubes de terre végétale.</p>
+
+<h2>Quelle Profondeur de Terre Végétale pour le Gazon ?</h2>
+<p>Pour la pose de gazon, une profondeur de <strong>4 pouces de terre végétale de qualité</strong> est recommandée. Cela donne aux racines du gazon suffisamment de profondeur pour s'établir et accéder aux nutriments. Si votre sol existant est de bonne qualité, 2-3 pouces de terre végétale peuvent suffire comme couche d'amendement.</p>
+<p>Pour les plates-bandes, 6-12 pouces sont idéaux pour permettre une croissance racinaire profonde pour les légumes et les fleurs.</p>
+<p>Lors de l'achat de terre végétale, recherchez un matériau foncé et friable qui sent la terre &mdash; pas une odeur aigre ou chimique. La terre végétale tamisée a été filtrée pour enlever les roches, racines et débris, ce qui la rend idéale pour la préparation du gazon et les plates-bandes. La terre végétale non tamisée est moins chère mais peut contenir des mottes et des pierres qui créent une surface inégale ; elle convient mieux au remplissage des points bas ou aux grands projets de nivellement où vous allez épandre une couche épaisse.</p>
+
+<h2>Calculateur de Terre &mdash; Combien de Sacs Font une Verge Cube ?</h2>
+<p>Une verge cube de terre végétale équivaut à 27 pieds cubes. Un sac standard de terre végétale fait 0,75 pied cube, il vous faut donc <strong>36 sacs pour égaler une verge cube</strong>. Pour les projets de plus d'environ 2 verges cubes, la livraison en vrac est presque toujours plus pratique et économique que l'achat de sacs.</p>
+
+<h2>Foire Aux Questions</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">Quelle quantité de terre végétale ai-je besoin pour une nouvelle pelouse ?</div>
+    <div class="faq-a">Pour poser du gazon, vous avez besoin d'environ 4 pouces de terre végétale. Pour 1 000 pi² à 4 pouces de profondeur, vous avez besoin d'environ 12,3 verges cubes de terre végétale.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quelle profondeur de terre végétale pour le gazon ?</div>
+    <div class="faq-a">Une profondeur de 4 pouces de terre végétale de qualité est recommandée avant de poser du gazon. Cela donne aux racines du gazon suffisamment de profondeur pour s'établir et accéder aux nutriments et à l'eau.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Combien de sacs de terre végétale font une verge cube ?</div>
+    <div class="faq-a">Un sac standard de terre végétale fait 0,75 pied cube. Il faut 36 sacs pour égaler une verge cube (27 pieds cubes). Pour les grands projets, la livraison en vrac est généralement plus économique que les sacs.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Puis-je utiliser du terreau à la place de la terre végétale ?</div>
+    <div class="faq-a">Le terreau est généralement enrichi en compost et en matière organique, ce qui le rend adapté aux plates-bandes mais pas idéal pour l'installation de gazon. Utilisez de la terre végétale tamisée pour les projets de gazon afin d'assurer une base plane et homogène.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Calculateurs Connexes</h2>
+  <div class="section-links">
+    <a class="section-link" href="/sod-calculator/">Calculateur de Gazon</a>
+    <a class="section-link" href="/grass-seed-calculator/">Calculateur de Semences</a>
+    <a class="section-link" href="/mulch-calculator/">Calculateur de Paillis</a>
+  </div>
+</div>

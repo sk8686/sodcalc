@@ -1,0 +1,154 @@
+<h1>Calculadora de Grama</h1>
+<p>Calcule exatamente quanta grama você precisa. Insira a área do seu gramado, selecione o tipo de grama e obtenha seus resultados em rolos e paletes &mdash; com um checklist de pré-instalação incluído.</p>
+
+<div class="card">
+<form id="sod-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-area">Área do Gramado</label>
+      <input type="number" id="sod-area" placeholder="ex: 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="sod-unit">Unidade</label>
+      <select id="sod-unit">
+        <option value="imperial">Pés Quadrados (pés²)</option>
+        <option value="metric">Metros Quadrados (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-type">Tipo de Grama</label>
+      <select id="sod-type">
+        <option value="">Selecione o tipo de grama</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Zoysia">Zoysia</option>
+        <option value="St. Augustine">St. Augustine</option>
+        <option value="Kentucky Bluegrass">Kentucky Bluegrass</option>
+        <option value="Tall Fescue">Tall Fescue</option>
+        <option value="Centipede">Centipede</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Perennial Ryegrass">Perennial Ryegrass</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="custom-roll">Tamanho do Rolo (pés²)</label>
+      <input type="number" id="custom-roll" placeholder="10" min="1" step="any">
+      <span class="hint">Rolo padrão = 10 pés²</span>
+    </div>
+  </div>
+</form>
+
+<div id="sod-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">Você Precisa</div>
+    <div class="result-value" id="sod-rolls">--</div>
+    <div class="result-label">rolos padrão</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="sod-pallets">--</div>
+        <div class="lbl">paletes</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-waste">--</div>
+        <div class="lbl">com 5% de desperdício</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-sqft">--</div>
+        <div class="lbl">área total</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>Importante:</strong> A grama é um produto vivo. Deve ser instalada dentro de 24-48 horas após a entrega. Faça o pedido apenas quando estiver pronto para instalar.
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Checklist de Pré-Instalação</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-ph"><label>Testar o pH do solo</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-kill"><label>Remover grama e ervas daninhas existentes</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-level"><label>Nivelar o solo e garantir drenagem adequada</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-moisten"><label>Umedecer levemente a superfície do solo antes de instalar</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-schedule"><label>Agendar a entrega da grama para o dia da instalação</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">Guia completo de preparação &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">Cuidados Pós-Instalação</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-water"><label>Regar profundamente todos os dias nas primeiras 2 semanas</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-traffic"><label>Evitar tráfego de pessoas por pelo menos 2 semanas</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-mow"><label>Aguardar até que a grama atinja 7-10 cm antes do primeiro corte</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-fertilize"><label>Aplicar fertilizante de arranque após 4-6 semanas</label></div>
+      <a class="checklist-link" href="/new-sod-care/">Guia completo de cuidados &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links mt-2">
+    <a class="section-link" href="/how-to-lay-sod/">&#8594; Já tem seus números? Veja como instalar grama</a>
+    <a class="section-link" href="/topsoil-calculator/">&#8594; Calcule quanta terra vegetal você vai precisar</a>
+    <a class="section-link" href="/sod-vs-seed/">&#8594; Não tem certeza se grama é a melhor opção? Compare grama vs semente</a>
+  </div>
+</div>
+</div>
+
+<h2>Quanta Grama Preciso?</h2>
+<p>Para calcular quanta grama você precisa, meça o comprimento e a largura da área do seu gramado em pés e multiplique-os para obter a metragem quadrada. Se o seu gramado tem formato irregular, divida-o em retângulos menores, calcule cada um e some-os.</p>
+<p>Depois de obter a metragem quadrada total, divida pelo tamanho de um rolo padrão de grama (normalmente 10 pés²) para obter o número de rolos. Adicione 5-10% extra para compensar cortes em bordas, curvas e peças que podem ser danificadas durante o transporte.</p>
+<p>A maioria das gramas é vendida por palete, com cada palete contendo aproximadamente 450-500 pés quadrados (50 rolos padrão). Para projetos grandes, pedir por palete é mais conveniente e geralmente mais econômico do que pedir rolos individuais.</p>
+<p>Para gramados de formato irregular, o método mais fácil é esboçar seu quintal em papel quadriculado, dividi-lo em retângulos e somar as áreas individuais. Para bordas curvas, trate a curva como uma linha reta que representa a média da forma &mdash; você cortará a curva real durante a instalação e o excesso da superestimação se torna sua margem de desperdício.</p>
+<p>Se você tem um declive ou morro, meça a área plana (comprimento × largura), não a superfície inclinada. A grama pode esticar ligeiramente e a diferença de comprimento do declive é tipicamente pequena o suficiente para que 5% de desperdício a cubra.</p>
+
+<h2>Calculadora de Turf</h2>
+<p>Quer você chame de sod ou turf, o cálculo é o mesmo. Nos Estados Unidos e Canadá, o termo "sod" é mais comum, enquanto "turf" é amplamente usado no Reino Unido, Austrália e Nova Zelândia. Esta calculadora funciona para ambos &mdash; basta inserir sua área e obter seus resultados em rolos ou paletes.</p>
+
+<h2>Quanta Grama Há em um Palete?</h2>
+<p>Um palete padrão de grama contém <strong>450 a 500 pés quadrados</strong> de cobertura. Isso normalmente se divide em:</p>
+<div class="card"><table class="data-table">
+  <tr><th>Formato</th><th>Cobertura</th><th>Por Palete</th></tr>
+  <tr><td>Rolo</td><td>10 pés²</td><td>50 rolos</td></tr>
+  <tr><td>Placa</td><td>2,67 pés²</td><td>100 placas</td></tr>
+  <tr><td>Rolo Grande</td><td>15 pés²</td><td>30 rolos</td></tr>
+</table></div>
+<p>Os tamanhos da grama podem variar conforme o produtor e a região. Se o seu fornecedor usar tamanhos não padronizados, use a opção de tamanho personalizado de rolo na calculadora acima.</p>
+
+<h2>Tamanhos de Rolos de Grama</h2>
+<p>Os rolos padrão de grama normalmente medem 2 pés de largura por 5 pés de comprimento, cobrindo 10 pés quadrados cada. As placas geralmente têm 16 por 24 polegadas, cobrindo aproximadamente 2,67 pés quadrados. Rolos grandes podem cobrir 15 pés quadrados ou mais. Sempre confirme o tamanho exato com seu fornecedor antes de calcular.</p>
+
+<h2>Perguntas Frequentes</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">Quantos paletes de grama preciso para 1.000 pés quadrados?</div>
+    <div class="faq-a">Para 1.000 pés quadrados, você precisa de aproximadamente 2 paletes de grama (considerando 500 pés² por palete). Com 5% extra para desperdício e cortes, peça 2,1 paletes.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quanta grama extra devo pedir?</div>
+    <div class="faq-a">Peça 5-10% extra de grama para compensar cortes em bordas, curvas e peças danificadas. É melhor ter alguns rolos extras do que ficar sem.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Posso instalar grama sobre a grama existente?</div>
+    <div class="faq-a">Não. Você deve remover a grama e vegetação existentes antes de instalar nova grama. As raízes da grama precisam de contato direto com o solo nu para se estabelecer. Instalar grama sobre grama velha impedirá o enraizamento e fará a nova grama morrer.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quanto tempo a grama leva para enraizar?</div>
+    <div class="faq-a">A grama normalmente começa a enraizar em 10-14 dias com rega adequada. O enraizamento completo leva de 4 a 6 semanas. Durante este período, evite tráfego intenso e mantenha o solo consistentemente úmido.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Turf e sod são a mesma coisa?</div>
+    <div class="faq-a">Sim, turf e sod se referem à mesma coisa: grama pré-cultivada que vem em rolos ou placas. "Sod" é o termo mais comum nos Estados Unidos, enquanto "turf" é amplamente usado no Reino Unido, Austrália e outros países de língua inglesa.</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>Calculadoras Relacionadas</h2>
+  <div class="section-links">
+    <a class="section-link" href="/grass-seed-calculator/">Calculadora de Sementes de Grama</a>
+    <a class="section-link" href="/topsoil-calculator/">Calculadora de Terra Vegetal</a>
+    <a class="section-link" href="/mulch-calculator/">Calculadora de Cobertura Morta</a>
+  </div>
+</div>

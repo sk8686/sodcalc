@@ -1,0 +1,154 @@
+<h1>सॉड कैलकुलेटर</h1>
+<p>गणना करें कि आपको कितनी सॉड चाहिए। अपना लॉन क्षेत्र दर्ज करें, अपना घास प्रकार चुनें, और रोल और पैलेट में अपने परिणाम प्राप्त करें &mdash; प्री-इंस्टॉलेशन चेकलिस्ट के साथ।</p>
+
+<div class="card">
+<form id="sod-form" class="calc-form" onsubmit="return false;">
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-area">लॉन क्षेत्र</label>
+      <input type="number" id="sod-area" placeholder="जैसे 2500" min="1" step="any" required>
+    </div>
+    <div class="calc-group">
+      <label for="sod-unit">इकाई</label>
+      <select id="sod-unit">
+        <option value="imperial">वर्ग फुट (sq ft)</option>
+        <option value="metric">वर्ग मीटर (sq m)</option>
+      </select>
+    </div>
+  </div>
+  <div class="calc-row">
+    <div class="calc-group">
+      <label for="sod-type">घास का प्रकार</label>
+      <select id="sod-type">
+        <option value="">घास का प्रकार चुनें</option>
+        <option value="Bermuda">बरमूडा</option>
+        <option value="Zoysia">जॉयसिया</option>
+        <option value="St. Augustine">सेंट ऑगस्टीन</option>
+        <option value="Kentucky Bluegrass">केंटकी ब्लूग्रास</option>
+        <option value="Tall Fescue">टॉल फेस्क्यू</option>
+        <option value="Centipede">सेंटीपीड</option>
+        <option value="Bahia">बाहिया</option>
+        <option value="Perennial Ryegrass">पेरेनियल राईग्रास</option>
+      </select>
+    </div>
+    <div class="calc-group">
+      <label for="custom-roll">रोल का आकार (वर्ग फुट)</label>
+      <input type="number" id="custom-roll" placeholder="10" min="1" step="any">
+      <span class="hint">मानक रोल = 10 वर्ग फुट</span>
+    </div>
+  </div>
+</form>
+
+<div id="sod-results" class="results">
+  <div class="result-card">
+    <div class="result-heading">आपको चाहिए</div>
+    <div class="result-value" id="sod-rolls">--</div>
+    <div class="result-label">मानक रोल</div>
+    <div class="result-secondary">
+      <div class="result-item">
+        <div class="val" id="sod-pallets">--</div>
+        <div class="lbl">पैलेट</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-waste">--</div>
+        <div class="lbl">5% बर्बादी के साथ</div>
+      </div>
+      <div class="result-item">
+        <div class="val" id="sod-sqft">--</div>
+        <div class="lbl">कुल क्षेत्र</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-tip">
+    <strong>महत्वपूर्ण:</strong> सॉड एक जीवित उत्पाद है। इसे डिलीवरी के 24-48 घंटों के भीतर स्थापित किया जाना चाहिए। केवल तभी ऑर्डर करें जब आप स्थापित करने के लिए तैयार हों।
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">प्री-इंस्टॉलेशन चेकलिस्ट</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-ph"><label>मिट्टी का pH परीक्षण करें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-kill"><label>मौजूदा घास और खरपतवार हटाएं</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-level"><label>मिट्टी को समतल करें और उचित जल निकासी सुनिश्चित करें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-moisten"><label>बिछाने से पहले मिट्टी की सतह को हल्का गीला करें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-schedule"><label>स्थापना के दिन के लिए सॉड डिलीवरी शेड्यूल करें</label></div>
+      <a class="checklist-link" href="/how-to-prepare-soil-for-sod/">पूर्ण तैयारी गाइड &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="checklist">
+      <div class="checklist-title">पोस्ट-इंस्टॉलेशन देखभाल</div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-water"><label>पहले 2 सप्ताह तक हर दिन गहराई से पानी दें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-traffic"><label>कम से कम 2 सप्ताह तक पैदल आवाजाही से बचें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-mow"><label>पहली घास कटाई से पहले सॉड के 3-4 इंच तक पहुंचने तक प्रतीक्षा करें</label></div>
+      <div class="checklist-item"><input type="checkbox" data-key="sod-fertilize"><label>4-6 सप्ताह के बाद स्टार्टर उर्वरक लगाएं</label></div>
+      <a class="checklist-link" href="/new-sod-care/">पूर्ण देखभाल गाइड &rarr;</a>
+    </div>
+  </div>
+
+  <div class="section-links mt-2">
+    <a class="section-link" href="/how-to-lay-sod/">&#8594; अपनी संख्या मिल गई? यहां सॉड बिछाने का तरीका है</a>
+    <a class="section-link" href="/topsoil-calculator/">&#8594; गणना करें कि आपको कितनी ऊपरी मिट्टी चाहिए</a>
+    <a class="section-link" href="/sod-vs-seed/">&#8594; सुनिश्चित नहीं कि सॉड आपके लिए सही है? सॉड बनाम बीज की तुलना करें</a>
+  </div>
+</div>
+</div>
+
+<h2>मुझे कितनी सॉड चाहिए?</h2>
+<p>यह गणना करने के लिए कि आपको कितनी सॉड चाहिए, अपने लॉन क्षेत्र की लंबाई और चौड़ाई फुट में मापें और वर्ग फुटेज प्राप्त करने के लिए उन्हें एक साथ गुणा करें। यदि आपके लॉन का आकार अनियमित है, तो इसे छोटे आयतों में तोड़ें, प्रत्येक की गणना करें और उन्हें एक साथ जोड़ें।</p>
+<p>एक बार आपके पास कुल वर्ग फुटेज हो, तो रोल की संख्या प्राप्त करने के लिए मानक सॉड रोल के आकार (आमतौर पर 10 वर्ग फुट) से विभाजित करें। किनारों, घुमावों और परिवहन के दौरान क्षतिग्रस्त हो सकने वाले टुकड़ों के लिए 5-10% अतिरिक्त जोड़ें।</p>
+<p>अधिकांश सॉड पैलेट द्वारा बेची जाती है, प्रत्येक पैलेट में लगभग 450-500 वर्ग फुट (50 मानक रोल) होते हैं। बड़ी परियोजनाओं के लिए, पैलेट द्वारा ऑर्डर करना अधिक सुविधाजनक और अक्सर अलग-अलग रोल ऑर्डर करने की तुलना में अधिक किफायती होता है।</p>
+<p>अनियमित आकार के लॉन के लिए, सबसे आसान तरीका ग्राफ पेपर पर अपने यार्ड का स्केच बनाना, इसे आयतों में विभाजित करना और अलग-अलग क्षेत्रों को जोड़ना है। घुमावदार किनारों के लिए, घुमाव को एक सीधी रेखा के रूप में मानें जो आकार का औसत निकालती है &mdash; आप स्थापना के दौरान वास्तविक घुमाव काटेंगे और अधिक अनुमान से अतिरिक्त आपकी बर्बादी भत्ता बन जाता है।</p>
+<p>यदि आपके पास ढलान या पहाड़ी है, तो सपाट फुटप्रिंट मापें (लंबाई × चौड़ाई), ढलान वाली सतह क्षेत्र नहीं। सॉड थोड़ा खिंच सकती है और ढलान की लंबाई का अंतर आमतौर पर इतना छोटा होता है कि 5% बर्बादी इसे कवर कर लेती है।</p>
+
+<h2>टर्फ कैलकुलेटर</h2>
+<p>चाहे आप इसे सॉड कहें या टर्फ, गणना समान है। संयुक्त राज्य अमेरिका और कनाडा में, "सॉड" शब्द अधिक सामान्य है, जबकि यूनाइटेड किंगडम, ऑस्ट्रेलिया और न्यूजीलैंड में "टर्फ" व्यापक रूप से उपयोग किया जाता है। यह कैलकुलेटर दोनों के लिए काम करता है &mdash; बस अपना क्षेत्र दर्ज करें और रोल या पैलेट में अपने परिणाम प्राप्त करें।</p>
+
+<h2>एक पैलेट पर कितनी सॉड होती है?</h2>
+<p>सॉड के एक मानक पैलेट में <strong>450 से 500 वर्ग फुट</strong> कवरेज होता है। यह आमतौर पर इस प्रकार विभाजित होता है:</p>
+<div class="card"><table class="data-table">
+  <tr><th>प्रारूप</th><th>कवरेज</th><th>प्रति पैलेट</th></tr>
+  <tr><td>रोल</td><td>10 वर्ग फुट</td><td>50 रोल</td></tr>
+  <tr><td>स्लैब</td><td>2.67 वर्ग फुट</td><td>100 स्लैब</td></tr>
+  <tr><td>बड़ा रोल</td><td>15 वर्ग फुट</td><td>30 रोल</td></tr>
+</table></div>
+<p>सॉड के आकार फार्म और क्षेत्र के अनुसार भिन्न हो सकते हैं। यदि आपका आपूर्तिकर्ता गैर-मानक आकार का उपययोग करता है, तो ऊपर कैलकुलेटर में कस्टम रोल आकार विकल्प का उपयोग करें।</p>
+
+<h2>सॉड रोल के आकार</h2>
+<p>मानक सॉड रोल आमतौर पर 2 फुट चौड़े और 5 फुट लंबे होते हैं, प्रत्येक 10 वर्ग फुट को कवर करते हैं। स्लैब आमतौर पर 16 इंच गुणा 24 इंच होते हैं, लगभग 2.67 वर्ग फुट कवर करते हैं। बड़े रोल 15 वर्ग फुट या अधिक कवर कर सकते हैं। गणना करने से पहले हमेशा अपने आपूर्तिकर्ता से सटीक आकार की पुष्टि करें।</p>
+
+<h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+<div class="card">
+<div class="faq-list">
+  <div class="faq-item">
+    <div class="faq-q">1,000 वर्ग फुट के लिए मुझे सॉड के कितने पैलेट चाहिए?</div>
+    <div class="faq-a">1,000 वर्ग फुट के लिए, आपको लगभग 2 पैलेट सॉड की आवश्यकता होगी (मानते हुए 500 वर्ग फुट प्रति पैलेट)। कटाई और बर्बादी के लिए 5% अतिरिक्त के साथ, 2.1 पैलेट ऑर्डर करें।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">मुझे कितनी अतिरिक्त सॉड ऑर्डर करनी चाहिए?</div>
+    <div class="faq-a">किनारों, घुमावों और किसी भी क्षतिग्रस्त टुकड़ों के लिए 5-10% अतिरिक्त सॉड ऑर्डर करें। कम पड़ने से कुछ अतिरिक्त रोल रखना बेहतर है।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">क्या मैं मौजूदा घास के ऊपर सॉड बिछा सकता हूं?</div>
+    <div class="faq-a">नहीं। नई सॉड बिछाने से पहले आपको मौजूदा घास और वनस्पति को हटाना होगा। सॉड की जड़ों को स्थापित होने के लिए नंगी मिट्टी से सीधा संपर्क चाहिए। पुरानी घास के ऊपर सॉड बिछाने से जड़ पकड़ने में बाधा आएगी और नई सॉड मर जाएगी।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">सॉड को जड़ पकड़ने में कितना समय लगता है?</div>
+    <div class="faq-a">उचित पानी देने पर सॉड आमतौर पर 10-14 दिनों के भीतर जड़ पकड़ना शुरू कर देती है। पूर्ण जड़ स्थापना में 4-6 सप्ताह लगते हैं। इस अवधि के दौरान, भारी पैदल आवाजाही से बचें और मिट्टी को लगातार नम रखें।</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">क्या टर्फ और सॉड एक ही चीज है?</div>
+    <div class="faq-a">हां, टर्फ और सॉड एक ही चीज को संदर्भित करते हैं: पहले से उगाई गई घास जो रोल या स्लैब में आती है। संयुक्त राज्य अमेरिका में "सॉड" अधिक सामान्य शब्द है, जबकि "टर्फ" यूके, ऑस्ट्रेलिया और अन्य अंग्रेजी भाषी देशों में व्यापक रूप से उपयोग किया जाता है।</div>
+  </div>
+</div>
+</div>
+
+<div class="mt-2">
+  <h2>संबंधित कैलकुलेटर</h2>
+  <div class="section-links">
+    <a class="section-link" href="/grass-seed-calculator/">घास के बीज कैलकुलेटर</a>
+    <a class="section-link" href="/topsoil-calculator/">ऊपरी मिट्टी कैलकुलेटर</a>
+    <a class="section-link" href="/mulch-calculator/">मल्च कैलकुलेटर</a>
+  </div>
+</div>

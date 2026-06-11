@@ -1,0 +1,10 @@
+[
+  { "code": "en", "name": "English", "dir": "ltr", "htmlLang": "en", "base": "" },
+  { "code": "zh", "name": "中文", "dir": "ltr", "htmlLang": "zh-CN", "base": "zh/" },
+  { "code": "es", "name": "Español", "dir": "ltr", "htmlLang": "es", "base": "es/" },
+  { "code": "hi", "name": "हिन्दी", "dir": "ltr", "htmlLang": "hi", "base": "hi/" },
+  { "code": "ar", "name": "العربية", "dir": "rtl", "htmlLang": "ar", "base": "ar/" },
+  { "code": "pt", "name": "Português", "dir": "ltr", "htmlLang": "pt", "base": "pt/" },
+  { "code": "fr", "name": "Français", "dir": "ltr", "htmlLang": "fr", "base": "fr/" },
+  { "code": "ja", "name": "日本語", "dir": "ltr", "htmlLang": "ja", "base": "ja/" }
+]
