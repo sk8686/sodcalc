@@ -4,6 +4,6 @@
   "description": "SodCalc - Lawn project guide & calculator site",
   "private": true,
   "scripts": {
-    "build": "node src/build.js"
+    "build": "node src/i18n/build-ml.js --all"
   }
 }
