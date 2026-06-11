@@ -277,6 +277,29 @@ for (const lang of buildLangs) {
 const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemapUrls.join('\n') + '\n</urlset>';
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
 
+// Generate _headers for Cloudflare Pages (caching + security)
+const headers = [
+  '/*',
+  '  X-Content-Type-Options: nosniff',
+  '  Referrer-Policy: strict-origin-when-cross-origin',
+  '',
+  '/css/*',
+  '  Cache-Control: public, max-age=31536000, immutable',
+  '',
+  '/js/*',
+  '  Cache-Control: public, max-age=31536000, immutable',
+  '',
+  '/*.html',
+  '  Cache-Control: public, max-age=3600, must-revalidate',
+  '',
+  '/sitemap.xml',
+  '  Cache-Control: public, max-age=86400',
+  '',
+  '/robots.txt',
+  '  Cache-Control: public, max-age=86400',
+].join('\n');
+fs.writeFileSync(path.join(DIST, '_headers'), headers);
+
 console.log('\nBuild complete! ' + sitemapUrls.length + ' URLs in sitemap.');
 console.log('Output: ' + DIST);
 
